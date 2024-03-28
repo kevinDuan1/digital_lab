@@ -71,5 +71,30 @@ set_property PACKAGE_PIN U14 [get_ports {LED_OUT[1]}]
 set_property PACKAGE_PIN V14 [get_ports {LED_OUT[0]}]
         set_property IOSTANDARD LVCMOS33 [get_ports {LED_OUT[0]}]
 
+# VGA colour
+set_property PACKAGE_PIN N19 [get_ports {VGA_Colour[7]}]
+    set_property IOSTANDARD LVCMOS33 [get_ports {VGA_Colour[7]}]
+set_property PACKAGE_PIN J19 [get_ports {VGA_Colour[6]}]
+    set_property IOSTANDARD LVCMOS33 [get_ports {VGA_Colour[6]}]
+set_property PACKAGE_PIN H19 [get_ports {VGA_Colour[5]}]
+    set_property IOSTANDARD LVCMOS33 [get_ports {VGA_Colour[5]}]
 
-        
+set_property PACKAGE_PIN D17 [get_ports {VGA_Colour[4]}]
+    set_property IOSTANDARD LVCMOS33 [get_ports {VGA_Colour[4]}]
+set_property PACKAGE_PIN G17 [get_ports {VGA_Colour[3]}]
+    set_property IOSTANDARD LVCMOS33 [get_ports {VGA_Colour[3]}]
+set_property PACKAGE_PIN H17 [get_ports {VGA_Colour[2]}]
+    set_property IOSTANDARD LVCMOS33 [get_ports {VGA_Colour[2]}]
+
+set_property PACKAGE_PIN J18 [get_ports {VGA_Colour[1]}]
+    set_property IOSTANDARD LVCMOS33 [get_ports {VGA_Colour[1]}]
+set_property PACKAGE_PIN K18 [get_ports {VGA_Colour[0]}]
+    set_property IOSTANDARD LVCMOS33 [get_ports {VGA_Colour[0]}]
+
+             
+# VGA HS and VS
+             
+set_property PACKAGE_PIN P19 [get_ports HS]
+    set_property IOSTANDARD LVCMOS33 [get_ports HS]
+set_property PACKAGE_PIN R19 [get_ports VS]
+    set_property IOSTANDARD LVCMOS33 [get_ports VS]
