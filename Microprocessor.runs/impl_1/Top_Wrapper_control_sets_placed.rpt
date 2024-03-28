@@ -1,0 +1,65 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
+| Date         : Tue Mar 19 09:24:17 2024
+| Host         : DESKTOP-B3MCU0U running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_Wrapper_control_sets_placed.rpt
+| Design       : Top_Wrapper
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    12 |
+| Minimum Number of register sites lost to control set restrictions |    16 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              13 |            7 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             121 |           38 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             122 |           41 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------------------------------------+-----------------------+------------------+----------------+
+|  Clock Signal  |                Enable Signal                |    Set/Reset Signal   | Slice Load Count | Bel Load Count |
++----------------+---------------------------------------------+-----------------------+------------------+----------------+
+|  CLK_IBUF_BUFG | ProcCPU/COMMAND_reg[3][0]                   | RESET_IBUF            |                1 |              4 |
+|  CLK_IBUF_BUFG | ProcCPU/FSM_sequential_CurrState[5]_i_1_n_0 | RESET_IBUF            |                5 |              6 |
+|  CLK_IBUF_BUFG | ProcCPU/E[0]                                | RESET_IBUF            |                1 |              8 |
+|  CLK_IBUF_BUFG | ProcCPU/CurrRegB[7]_i_1_n_0                 | RESET_IBUF            |                3 |              8 |
+|  CLK_IBUF_BUFG | ProcCPU/CurrRegA[7]_i_1_n_0                 | RESET_IBUF            |                2 |              8 |
+|  CLK_IBUF_BUFG | ProcCPU/CurrProgCounter[7]_i_1_n_0          | RESET_IBUF            |                5 |              8 |
+|  CLK_IBUF_BUFG | ProcCPU/CurrProgContext[7]_i_1_n_0          | RESET_IBUF            |                6 |              8 |
+|  CLK_IBUF_BUFG | ProcCPU/CurrBusDataOut[7]_i_1_n_0           | RESET_IBUF            |                3 |              8 |
+|  CLK_IBUF_BUFG |                                             |                       |                7 |             13 |
+|  CLK_IBUF_BUFG | ProcTimer/Timer[0]_i_2_n_0                  | ProcCPU/Timer_reg[31] |                8 |             32 |
+|  CLK_IBUF_BUFG | ProcTimer/TargetReached1                    | RESET_IBUF            |                7 |             32 |
+|  CLK_IBUF_BUFG |                                             | RESET_IBUF            |               38 |            121 |
++----------------+---------------------------------------------+-----------------------+------------------+----------------+
+
+

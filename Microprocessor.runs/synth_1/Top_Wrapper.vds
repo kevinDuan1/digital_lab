@@ -1,0 +1,570 @@
+#-----------------------------------------------------------
+# Vivado v2015.2.1 (64-bit)
+# SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
+# IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
+# Start of session at: Tue Mar 19 06:44:18 2024
+# Process ID: 4224
+# Log file: C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.runs/synth_1/Top_Wrapper.vds
+# Journal file: C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top_Wrapper.tcl -notrace
+Command: synth_design -top Top_Wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2023.09' and will expire in -171 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 266.051 ; gain = 86.934
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Top_Wrapper' [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Top_Wrapper.v:23]
+INFO: [Synth 8-638] synthesizing module 'New_Top_Wrapper' [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/imports/new/New_Top_Wrapper.v:23]
+	Parameter IRBaseAddr bound to: 8'b10010000 
+INFO: [Synth 8-638] synthesizing module 'TENHz_Counter2' [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/imports/new/TENHz_Counter2.v:23]
+INFO: [Synth 8-256] done synthesizing module 'TENHz_Counter2' (1#1) [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/imports/new/TENHz_Counter2.v:23]
+INFO: [Synth 8-638] synthesizing module 'IRTransmitterSM2' [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/imports/new/IRTransmitterSM2.v:23]
+	Parameter StartBurstSize bound to: 88 - type: integer 
+	Parameter GapSize bound to: 40 - type: integer 
+	Parameter CarSelectBurstSize bound to: 22 - type: integer 
+	Parameter AssertBurstSize bound to: 44 - type: integer 
+	Parameter DeAssertBurstSize bound to: 22 - type: integer 
+	Parameter CLKratio bound to: 2500 - type: integer 
+	Parameter IDLE bound to: 4'b0000 
+	Parameter START bound to: 4'b0001 
+	Parameter GAP_start bound to: 4'b0010 
+	Parameter CAR_SELECT bound to: 4'b0011 
+	Parameter GAP_carselect bound to: 4'b0100 
+	Parameter RIGHT bound to: 4'b0101 
+	Parameter GAP_right bound to: 4'b0110 
+	Parameter LEFT bound to: 4'b0111 
+	Parameter GAP_left bound to: 4'b1000 
+	Parameter BACKWARD bound to: 4'b1001 
+	Parameter GAP_backward bound to: 4'b1010 
+	Parameter FORWARD bound to: 4'b1011 
+	Parameter GAP_forward bound to: 4'b1100 
+INFO: [Synth 8-256] done synthesizing module 'IRTransmitterSM2' (2#1) [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/imports/new/IRTransmitterSM2.v:23]
+INFO: [Synth 8-256] done synthesizing module 'New_Top_Wrapper' (3#1) [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/imports/new/New_Top_Wrapper.v:23]
+INFO: [Synth 8-638] synthesizing module 'RAM' [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/RAM.v:23]
+	Parameter RAMBaseAddr bound to: 0 - type: integer 
+	Parameter RAMAddrWidth bound to: 7 - type: integer 
+	Parameter RAMAddrMask bound to: 127 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Complete_Demo_RAM.txt' is read successfully [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/RAM.v:49]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (4#1) [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/RAM.v:23]
+INFO: [Synth 8-638] synthesizing module 'ROM' [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/ROM.v:23]
+	Parameter RAMAddrWidth bound to: 8 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Complete_Demo_ROM.txt' is read successfully [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/ROM.v:35]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (5#1) [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/ROM.v:23]
+INFO: [Synth 8-638] synthesizing module 'Timer' [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Timer.v:23]
+	Parameter TimerBaseAddr bound to: 8'b11110000 
+	Parameter InitialInterruptRate bound to: 100 - type: integer 
+	Parameter InitialInterruptEnable bound to: 1'b1 
+INFO: [Synth 8-256] done synthesizing module 'Timer' (6#1) [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Timer.v:23]
+INFO: [Synth 8-638] synthesizing module 'Processor' [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Processor.v:23]
+	Parameter IDLE bound to: 8'b11110000 
+	Parameter GET_THREAD_START_ADDR_0 bound to: 8'b11110001 
+	Parameter GET_THREAD_START_ADDR_1 bound to: 8'b11110010 
+	Parameter GET_THREAD_START_ADDR_2 bound to: 8'b11110011 
+	Parameter CHOOSE_OPP bound to: 8'b00000000 
+	Parameter READ_FROM_MEM_TO_A bound to: 8'b00010000 
+	Parameter READ_FROM_MEM_TO_B bound to: 8'b00010001 
+	Parameter READ_FROM_MEM_0 bound to: 8'b00010010 
+	Parameter READ_FROM_MEM_1 bound to: 8'b00010011 
+	Parameter READ_FROM_MEM_2 bound to: 8'b00010100 
+	Parameter WRITE_TO_MEM_FROM_A bound to: 8'b00100000 
+	Parameter WRITE_TO_MEM_FROM_B bound to: 8'b00100001 
+	Parameter WRITE_TO_MEM_0 bound to: 8'b00100010 
+	Parameter DO_MATHS_OPP_SAVE_IN_A bound to: 8'b00110000 
+	Parameter DO_MATHS_OPP_SAVE_IN_B bound to: 8'b00110001 
+	Parameter DO_MATHS_OPP_0 bound to: 8'b00110010 
+	Parameter IF_A_EQUALITY_B_GOTO bound to: 8'b01000000 
+	Parameter IF_A_EQUALITY_B_GOTO_BREQ bound to: 8'b01000001 
+	Parameter IF_A_EQUALITY_B_GOTO_BGTQ bound to: 8'b01000010 
+	Parameter IF_A_EQUALITY_B_GOTO_BLTQ bound to: 8'b01000011 
+	Parameter IF_A_EQUALITY_B_GOTO_0 bound to: 8'b01000100 
+	Parameter GOTO bound to: 8'b01010000 
+	Parameter GOTO_0 bound to: 8'b01010001 
+	Parameter GOTO_1 bound to: 8'b01010010 
+	Parameter GOTO_IDLE bound to: 8'b01010100 
+	Parameter FUNCTION_START bound to: 8'b01100000 
+	Parameter FUNCTION_START_0 bound to: 8'b01100001 
+	Parameter FUNCTION_START_1 bound to: 8'b01100010 
+	Parameter RETURN bound to: 8'b01100011 
+	Parameter RETURN_0 bound to: 8'b01100100 
+	Parameter DE_REFERENCE_A bound to: 8'b01110000 
+	Parameter DE_REFERENCE_B bound to: 8'b01110001 
+	Parameter DE_REFERENCE_0 bound to: 8'b01110010 
+	Parameter DE_REFERENCE_1 bound to: 8'b01110011 
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (7#1) [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Processor.v:218]
+INFO: [Synth 8-256] done synthesizing module 'Processor' (8#1) [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Processor.v:23]
+WARNING: [Synth 8-3848] Net BUS_WE in module/entity Top_Wrapper does not have driver. [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Top_Wrapper.v:41]
+INFO: [Synth 8-256] done synthesizing module 'Top_Wrapper' (9#1) [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Top_Wrapper.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 300.355 ; gain = 121.238
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin IRWrapper:BUS_WE to constant 0 [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Top_Wrapper.v:49]
+WARNING: [Synth 8-3295] tying undriven pin ProcRAM:BUS_WE to constant 0 [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Top_Wrapper.v:58]
+WARNING: [Synth 8-3295] tying undriven pin ProcTimer:BUS_WE to constant 0 [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Top_Wrapper.v:71]
+WARNING: [Synth 8-3295] tying undriven pin ProcCPU:BUS_WE to constant 0 [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Top_Wrapper.v:81]
+WARNING: [Synth 8-3295] tying undriven pin ProcCPU:BUS_INTERRUPTS_RAISE[0] to constant 0 [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/Top_Wrapper.v:81]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 300.355 ; gain = 121.238
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/constrs_1/imports/new/IRTransmitterSMXDC.xdc]
+Finished Parsing XDC File [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/constrs_1/imports/new/IRTransmitterSMXDC.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 591.148 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 591.148 ; gain = 412.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 591.148 ; gain = 412.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 591.148 ; gain = 412.031
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "SEND_PACKET" won't be mapped to RAM because address size (24) is larger than maximum supported(18)
+INFO: [Synth 8-802] inferred FSM for state register 'Curr_State_reg' in module 'IRTransmitterSM2'
+INFO: [Synth 8-5546] ROM "pulse" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "CLK_Reset" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "CLK_Reset" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "CLK_Reset" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "CLK_Reset" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Next_State" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Mem" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "ROM" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "DownCounter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Timer" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "TransmitTimerValue" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.srcs/sources_1/new/ALU.v:39]
+INFO: [Synth 8-802] inferred FSM for state register 'CurrState_reg' in module 'Processor'
+INFO: [Synth 8-5546] ROM "NextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "NextProgCounterOffset" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "NextBusDataOut" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "NextRegSelect" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "NextProgContext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "NextState" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NextState" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0000 |                             0000
+                   START |                             0001 |                             0001
+               GAP_start |                             0010 |                             0010
+              CAR_SELECT |                             0011 |                             0011
+           GAP_carselect |                             0100 |                             0100
+                   RIGHT |                             0101 |                             0101
+               GAP_right |                             0110 |                             0110
+                    LEFT |                             0111 |                             0111
+                GAP_left |                             1000 |                             1000
+                BACKWARD |                             1001 |                             1001
+            GAP_backward |                             1010 |                             1010
+                 FORWARD |                             1011 |                             1011
+             GAP_forward |                             1100 |                             1100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Curr_State_reg' using encoding 'sequential' in module 'IRTransmitterSM2'
+INFO: [Synth 8-5562] The signal Mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (7 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+              CHOOSE_OPP |                           000000 |                         00000000
+      READ_FROM_MEM_TO_A |                           000001 |                         00010000
+      READ_FROM_MEM_TO_B |                           000010 |                         00010001
+         READ_FROM_MEM_0 |                           000011 |                         00010010
+         READ_FROM_MEM_1 |                           000100 |                         00010011
+         READ_FROM_MEM_2 |                           000101 |                         00010100
+     WRITE_TO_MEM_FROM_A |                           000110 |                         00100000
+     WRITE_TO_MEM_FROM_B |                           000111 |                         00100001
+          WRITE_TO_MEM_0 |                           001000 |                         00100010
+  DO_MATHS_OPP_SAVE_IN_A |                           001001 |                         00110000
+  DO_MATHS_OPP_SAVE_IN_B |                           001010 |                         00110001
+          DO_MATHS_OPP_0 |                           001011 |                         00110010
+    IF_A_EQUALITY_B_GOTO |                           001100 |                         01000000
+IF_A_EQUALITY_B_GOTO_BREQ |                           001101 |                         01000001
+IF_A_EQUALITY_B_GOTO_BGTQ |                           001110 |                         01000010
+IF_A_EQUALITY_B_GOTO_BLTQ |                           001111 |                         01000011
+  IF_A_EQUALITY_B_GOTO_0 |                           010000 |                         01000100
+                    GOTO |                           010001 |                         01010000
+                  GOTO_0 |                           010010 |                         01010001
+                  GOTO_1 |                           010011 |                         01010010
+                    IDLE |                           010100 |                         11110000
+ GET_THREAD_START_ADDR_0 |                           010101 |                         11110001
+ GET_THREAD_START_ADDR_1 |                           010110 |                         11110010
+ GET_THREAD_START_ADDR_2 |                           010111 |                         11110011
+          FUNCTION_START |                           011000 |                         01100000
+        FUNCTION_START_0 |                           011001 |                         01100001
+        FUNCTION_START_1 |                           011010 |                         01100010
+                  RETURN |                           011011 |                         01100011
+                RETURN_0 |                           011100 |                         01100100
+          DE_REFERENCE_A |                           011101 |                         01110000
+          DE_REFERENCE_B |                           011110 |                         01110001
+          DE_REFERENCE_0 |                           011111 |                         01110010
+          DE_REFERENCE_1 |                           100000 |                         01110011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CurrState_reg' using encoding 'sequential' in module 'Processor'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 591.148 ; gain = 412.031
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               24 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---RAMs : 
+	             1024 Bit         RAMs := 1     
++---Muxes : 
+	 257 Input      8 Bit        Muxes := 1     
+	  13 Input      8 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	  33 Input      8 Bit        Muxes := 4     
+	  50 Input      6 Bit        Muxes := 1     
+	  34 Input      4 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	  33 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	  13 Input      1 Bit        Muxes := 2     
+	  33 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module TENHz_Counter2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module IRTransmitterSM2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  34 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	  13 Input      1 Bit        Muxes := 2     
+Module New_Top_Wrapper 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module RAM 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	             1024 Bit         RAMs := 1     
+Module ROM 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	 257 Input      8 Bit        Muxes := 1     
+Module Timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	  13 Input      8 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+Module Processor 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	                8 Bit    Registers := 6     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	  33 Input      8 Bit        Muxes := 4     
+	  50 Input      6 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	  33 Input      2 Bit        Muxes := 1     
+	  33 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 591.148 ; gain = 412.031
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "Counter/SEND_PACKET" won't be mapped to RAM because address size (24) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "IRSM/CLK_Reset" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "IRSM/CLK_Reset" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "IRSM/CLK_Reset" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "IRSM/CLK_Reset" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "IRSM/pulse" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "DownCounter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Timer" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "TransmitTimerValue" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ProcRAM/Mem" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 591.148 ; gain = 412.031
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 591.148 ; gain = 412.031
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-5562] The signal ProcRAM/Mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (7 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM:
++------------+-----------------+------------------------+---+---+------------------------+---+---+---------+--------+--------+-----------------------+
+|Module Name | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | OUT_REG | RAMB18 | RAMB36 | Hierarchical Name     | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+---------+--------+--------+-----------------------+
+|Top_Wrapper | ProcRAM/Mem_reg | 128 x 8(READ_FIRST)    | W | R |                        |   |   | Port A  | 1      | 0      | Top_Wrapper/extram__2 | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+---------+--------+--------+-----------------------+
+
+Note: The table shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. "Hierarchical Name" reflects the Block RAM name as it appears in the hierarchical module and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ProcCPU/CurrProgCounterOffset_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (\ProcCPU/CurrProgCounterOffset_reg[1] ) is unused and will be removed from module Top_Wrapper.
+WARNING: [Synth 8-3332] Sequential element (\ProcCPU/CurrInterruptAck_reg[0] ) is unused and will be removed from module Top_Wrapper.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 591.148 ; gain = 412.031
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 591.148 ; gain = 412.031
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 591.148 ; gain = 412.031
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 591.148 ; gain = 412.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 591.148 ; gain = 412.031
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance \ProcRAM/Mem_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 600.684 ; gain = 421.566
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 600.684 ; gain = 421.566
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 600.684 ; gain = 421.566
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 600.684 ; gain = 421.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 600.684 ; gain = 421.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 600.684 ; gain = 421.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    53|
+|3     |LUT1     |   123|
+|4     |LUT2     |    77|
+|5     |LUT3     |    61|
+|6     |LUT4     |    70|
+|7     |LUT5     |    71|
+|8     |LUT6     |   222|
+|9     |RAMB18E1 |     1|
+|10    |FDRE     |   244|
+|11    |FDSE     |    12|
+|12    |IBUF     |     2|
+|13    |OBUF     |     1|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------+-----------------+------+
+|      |Instance    |Module           |Cells |
++------+------------+-----------------+------+
+|1     |top         |                 |   938|
+|2     |  IRWrapper |New_Top_Wrapper  |   283|
+|3     |    Counter |TENHz_Counter2   |    84|
+|4     |    IRSM    |IRTransmitterSM2 |   195|
+|5     |  ProcCPU   |Processor        |   295|
+|6     |    ALU0    |ALU              |    50|
+|7     |  ProcRAM   |RAM              |     2|
+|8     |  ProcROM   |ROM              |    66|
+|9     |  ProcTimer |Timer            |   284|
++------+------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 600.684 ; gain = 421.566
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 600.684 ; gain = 97.730
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 600.684 ; gain = 421.566
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 56 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+86 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 600.684 ; gain = 388.688
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 600.684 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 19 06:44:40 2024...
