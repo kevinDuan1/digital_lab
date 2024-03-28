@@ -1,3 +1,4 @@
+// VGA
 @0x00	0x00	// PIXEL_DATA_IN Background value
 @0x01	0x01	// PIXEL_DATA_IN foreground value
 
@@ -6,3 +7,5 @@
 
 @0x20   0xC2    // X limit 160
 @0x21   0x78    // Y limit 120
+
+
