@@ -29,7 +29,7 @@ module Top_Wrapper(
     // VGA Outputs
     output [7:0]VGA_Colour,
     output HS,
-    output VS
+    output VS,
     // IR
     output IR_LED,
     //============
