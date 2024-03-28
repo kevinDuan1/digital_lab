@@ -21,19 +21,15 @@
 
 
 module Top_Wrapper(
+    // General 
     input CLK,
     input RESET,
-    output IR_LED
-//    output [7:0] BUS_DATA,
-//    output [7:0] BUS_ADDR,
-//    output BUS_WE,
-//    output [7:0] ROM_ADDRESS,
-//    output [7:0] ROM_DATA,
-//    output [1:0] BUS_INTERRUPTS_RAISE,
-//    output [1:0] BUS_INTERRUPTS_ACK,
-//    output [7:0] RegA,
-//    output [7:0] RegB,
-//    output [7:0] CURR_STATE
+    // IR Output
+    output IR_LED,
+    // VGA Outputs
+    output [7:0]VGA_Colour,
+    output HS,
+    output VS
     );
     
     //Declare wires for the RAM, ROM and Interrupt signals
@@ -57,6 +53,17 @@ module Top_Wrapper(
         .IR_LED(IR_LED)
         );
     
+    //Instantiate VGA interface
+    VGA_Interface VGA(
+        .CLK(CLK),
+        .RESET(RESET),
+        .HS(HS),
+        .VS(VS),
+        .VGA_Colour(VGA_Colour),
+        .BUS_ADDRESS(BUS_ADDR),
+        .BUS_DATA(BUS_DATA)
+        );
+
     //Instantiate the RAM module
     RAM ProcRAM (
         .CLK(CLK),
