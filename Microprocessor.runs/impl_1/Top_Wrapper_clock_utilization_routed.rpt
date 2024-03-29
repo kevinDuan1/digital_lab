@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date              : Fri Mar 29 20:01:52 2024
+| Date              : Fri Mar 29 22:02:43 2024
 | Host              : ASUS-VB running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file Top_Wrapper_clock_utilization_routed.rpt
 | Design            : Top_Wrapper
@@ -47,7 +47,7 @@ Table of Contents
 +-------+--------------------+---------------+------+-------+-------+
 | Index | BUFG Cell          | Net Name      | BELs | Sites | Fixed |
 +-------+--------------------+---------------+------+-------+-------+
-|     1 | CLK_IBUF_BUFG_inst | CLK_IBUF_BUFG |  487 |   190 |    no |
+|     1 | CLK_IBUF_BUFG_inst | CLK_IBUF_BUFG |  489 |   196 |    no |
 +-------+--------------------+---------------+------+-------+-------+
 
 
@@ -69,7 +69,7 @@ Table of Contents
 | Index | Local Clk Src                              | Net Name                                      | BELs | Sites | Fixed |
 +-------+--------------------------------------------+-----------------------------------------------+------+-------+-------+
 |     1 | VGA/Colour_Counter/trigger_out_reg         | VGA/Colour_Counter/I50                        |   16 |     4 |    no |
-|     2 | VGA/VGA_Sig_Gen/CounterCLK/trigger_out_reg | VGA/VGA_Sig_Gen/CounterCLK/count_value_reg[9] |   22 |     7 |    no |
+|     2 | VGA/VGA_Sig_Gen/CounterCLK/trigger_out_reg | VGA/VGA_Sig_Gen/CounterCLK/count_value_reg[9] |   22 |     9 |    no |
 +-------+--------------------------------------------+-----------------------------------------------+------+-------+-------+
 
 
@@ -81,7 +81,7 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  522 |  9600 |    0 |  1600 |    1 |    20 |    1 |    10 |    0 |    20 |
+| X0Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  524 |  9600 |    0 |  1600 |    1 |    20 |    1 |    10 |    0 |    20 |
 | X1Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 12000 |    0 |  1800 |    0 |    40 |    0 |    20 |    0 |    20 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  9600 |    0 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 12000 |    0 |  1800 |    0 |    40 |    0 |    20 |    0 |    20 |
@@ -97,7 +97,7 @@ Table of Contents
 +-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+----------------+
 | Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | Clock Net Name |
 +-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+----------------+
-| BUFG        | BUFHCE_X0Y8 |   no  |         0 |        0 |       0 |         2 |       0 |       0 | 485 |     0 |        0 | CLK_IBUF_BUFG  |
+| BUFG        | BUFHCE_X0Y8 |   no  |         0 |        0 |       0 |         2 |       0 |       0 | 487 |     0 |        0 | CLK_IBUF_BUFG  |
 +-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+----------------+
 
 
@@ -129,14 +129,14 @@ add_cells_to_pblock [get_pblocks  {CLKAG_CLK_IBUF_BUFG}] [get_cells -filter { PR
 resize_pblock [get_pblocks {CLKAG_CLK_IBUF_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
 #endgroup
 
-# Clock net "VGA/Colour_Counter/I50" driven by instance "VGA/Colour_Counter/trigger_out_reg" located at site "SLICE_X1Y36"
+# Clock net "VGA/Colour_Counter/I50" driven by instance "VGA/Colour_Counter/trigger_out_reg" located at site "SLICE_X3Y38"
 #startgroup
 create_pblock {CLKAG_VGA/Colour_Counter/I50}
 add_cells_to_pblock [get_pblocks  {CLKAG_VGA/Colour_Counter/I50}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="VGA/Colour_Counter/I50"}]]]
 resize_pblock [get_pblocks {CLKAG_VGA/Colour_Counter/I50}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
 #endgroup
 
-# Clock net "VGA/VGA_Sig_Gen/CounterCLK/count_value_reg[9]" driven by instance "VGA/VGA_Sig_Gen/CounterCLK/trigger_out_reg" located at site "SLICE_X8Y22"
+# Clock net "VGA/VGA_Sig_Gen/CounterCLK/count_value_reg[9]" driven by instance "VGA/VGA_Sig_Gen/CounterCLK/trigger_out_reg" located at site "SLICE_X2Y17"
 #startgroup
 create_pblock {CLKAG_VGA/VGA_Sig_Gen/CounterCLK/count_value_reg[9]}
 add_cells_to_pblock [get_pblocks  {CLKAG_VGA/VGA_Sig_Gen/CounterCLK/count_value_reg[9]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="VGA/VGA_Sig_Gen/CounterCLK/count_value_reg[9]"}]]]
