@@ -1,12 +1,12 @@
 
-****** Webtalk v2015.2.1 (64-bit)
-  **** SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
-  **** IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 
-source C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.hw/webtalk/labtool_webtalk.tcl -notrace
+source C:/Users/Marco/VGA-Interface/digital_lab/Microprocessor.hw/webtalk/labtool_webtalk.tcl -notrace
 
     while executing
-"webtalk_transmit -clientid 3413834385 -regid "212552497_0_0_864" -xml C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.hw/webtalk/usage_statistics_..."
-    (file "C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.hw/webtalk/labtool_webtalk.tcl" line 28)
-INFO: [Common 17-206] Exiting Webtalk at Tue Mar 19 08:47:04 2024...
+"webtalk_transmit -clientid 1774370405 -regid "212550022_0_0_309" -xml C:/Users/Marco/VGA-Interface/digital_lab/Microprocessor.hw/webtalk/usage_statist..."
+    (file "C:/Users/Marco/VGA-Interface/digital_lab/Microprocessor.hw/webtalk/labtool_webtalk.tcl" line 28)
+INFO: [Common 17-206] Exiting Webtalk at Fri Mar 29 19:16:12 2024...

@@ -42,9 +42,10 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common-41} -limit 4294967295
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step write_bitstream
 set rc [catch {
@@ -52,7 +53,7 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   debug::add_scope template.lib 1
   open_checkpoint Top_Wrapper_routed.dcp
-  set_property webtalk.parent_dir C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/Marco/VGA-Interface/digital_lab/Microprocessor.cache/wt [current_project]
   write_bitstream -force Top_Wrapper.bit 
   catch { write_sysdef -hwdef Top_Wrapper.hwdef -bitfile Top_Wrapper.bit -meminfo Top_Wrapper.mmi -ltxfile debug_nets.ltx -file Top_Wrapper.sysdef }
   close_msg_db -file write_bitstream.pb

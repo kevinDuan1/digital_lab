@@ -30,8 +30,6 @@ module Top_Wrapper(
     output [7:0]VGA_Colour,
     output HS,
     output VS,
-    // IR
-    output IR_LED,
     //============
     // mouse
     inout CLK_MOUSE,

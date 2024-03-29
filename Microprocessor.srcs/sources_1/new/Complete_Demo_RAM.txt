@@ -1,4 +1,3 @@
-// VGA
 @0x00	0x00	// PIXEL_DATA_IN Background value
 @0x01	0x01	// PIXEL_DATA_IN foreground value
 

@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date             : Tue Mar 19 09:24:38 2024
-| Host             : DESKTOP-B3MCU0U running 64-bit major release  (build 9200)
+----------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date             : Fri Mar 29 20:01:51 2024
+| Host             : ASUS-VB running 64-bit major release  (build 9200)
 | Command          : 
 | Design           : Top_Wrapper
 | Device           : xc7a35tcpg236-1
@@ -10,7 +10,7 @@ Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 | Grade            : commercial
 | Process          : typical
 | Characterization : Production
-------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
 
 Power Report
 
@@ -29,18 +29,18 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+-------+
-| Total On-Chip Power (W)  | 3.063 |
-| Dynamic (W)              | 2.983 |
-| Device Static (W)        | 0.080 |
-| Effective TJA (C/W)      | 5.0   |
-| Max Ambient (C)          | 69.7  |
-| Junction Temperature (C) | 40.3  |
-| Confidence Level         | Low   |
-| Setting File             | ---   |
-| Simulation Activity File | ---   |
-| Design Nets Matched      | NA    |
-+--------------------------+-------+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 15.026 (Junction temp exceeded!) |
+| Dynamic (W)              | 14.769                           |
+| Device Static (W)        | 0.257                            |
+| Effective TJA (C/W)      | 5.0                              |
+| Max Ambient (C)          | 9.9                              |
+| Junction Temperature (C) | 100.1                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
 
 
 1.1 On-Chip Components
@@ -49,17 +49,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     1.595 |      829 |       --- |             --- |
-|   LUT as Logic |     1.435 |      423 |     20800 |            2.03 |
-|   CARRY4       |     0.093 |       53 |      8150 |            0.65 |
-|   Register     |     0.061 |      256 |     41600 |            0.62 |
+| Slice Logic    |     3.203 |     1491 |       --- |             --- |
+|   LUT as Logic |     2.893 |      716 |     20800 |            3.44 |
+|   CARRY4       |     0.176 |       88 |      8150 |            1.08 |
+|   Register     |     0.123 |      522 |     41600 |            1.25 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       15 |       --- |             --- |
-| Signals        |     1.315 |      716 |       --- |             --- |
-| Block RAM      |     0.067 |      0.5 |        50 |            1.00 |
-| I/O            |     0.005 |        3 |       106 |            2.83 |
-| Static Power   |     0.080 |          |           |                 |
-| Total          |     3.063 |          |           |                 |
+|   F7/F8 Muxes  |     0.005 |        5 |     32600 |            0.02 |
+|   Others       |     0.000 |       45 |       --- |             --- |
+| Signals        |     2.717 |     1243 |       --- |             --- |
+| Block RAM      |     0.588 |      1.5 |        50 |            3.00 |
+| I/O            |     8.260 |       37 |       106 |           34.91 |
+| Static Power   |     0.257 |          |           |                 |
+| Total          |    15.026 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,16 +70,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     2.994 |       2.977 |      0.017 |
-| Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vccint    |       1.000 |     6.635 |       6.476 |      0.159 |
+| Vccaux    |       1.800 |     0.332 |       0.302 |      0.030 |
+| Vcco33    |       3.300 |     2.335 |       2.334 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.005 |       0.005 |      0.000 |
+| Vccbram   |       1.000 |     0.049 |       0.045 |      0.005 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -133,18 +134,37 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------+-----------+
-| Name        | Power (W) |
-+-------------+-----------+
-| Top_Wrapper |     2.983 |
-|   IRWrapper |     0.897 |
-|     Counter |     0.323 |
-|     IRSM    |     0.574 |
-|   ProcCPU   |     1.383 |
-|     ALU0    |     0.138 |
-|   ProcRAM   |     0.132 |
-|   ProcROM   |     0.126 |
-|   ProcTimer |     0.414 |
-+-------------+-----------+
++-------------------------+-----------+
+| Name                    | Power (W) |
++-------------------------+-----------+
+| Top_Wrapper             |    14.769 |
+|   CLK_MOUSE_IOBUF_inst  |     0.000 |
+|   DATA_MOUSE_IOBUF_inst |    <0.001 |
+|   IRWrapper             |     0.797 |
+|     Counter             |     0.308 |
+|     IRSM                |     0.489 |
+|   LED_Driver_inst       |    <0.001 |
+|   Mouse_Driver_inst     |     1.190 |
+|     Mouse_transceiver   |     1.088 |
+|       MSM               |     0.209 |
+|       R                 |     0.395 |
+|       T                 |     0.212 |
+|   ProcCPU               |     1.546 |
+|     ALU0                |     0.136 |
+|   ProcRAM               |     0.125 |
+|   ProcROM               |     0.915 |
+|   ProcTimer             |     0.317 |
+|   Seven_Seg_Driver_inst |     0.192 |
+|     RD                  |     0.192 |
+|       Bit17Counter      |     0.190 |
+|       Bit2Counter       |     0.002 |
+|   VGA                   |     1.363 |
+|     Colour_Counter      |     0.293 |
+|     Frame_Buffer        |     0.599 |
+|     VGA_Sig_Gen         |     0.385 |
+|       CounterCLK        |     0.085 |
+|       CounterH          |     0.247 |
+|       CounterV          |     0.011 |
++-------------------------+-----------+
 
 

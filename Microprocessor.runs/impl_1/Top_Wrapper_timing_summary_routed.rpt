@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date         : Tue Mar 19 09:24:37 2024
-| Host         : DESKTOP-B3MCU0U running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Fri Mar 29 20:01:49 2024
+| Host         : ASUS-VB running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file Top_Wrapper_timing_summary_routed.rpt -rpx Top_Wrapper_timing_summary_routed.rpx
 | Design       : Top_Wrapper
 | Device       : 7a35t-cpg236
@@ -50,7 +50,11 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 257 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
+ There are 487 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: VGA/Colour_Counter/trigger_out_reg/C (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: VGA/VGA_Sig_Gen/CounterCLK/trigger_out_reg/C (HIGH)
 
 
 2. checking constant_clock
@@ -65,21 +69,21 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 638 pins that are not constrained for maximum delay. (HIGH)
+ There are 1250 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 2 input ports with no input delay specified. (HIGH)
+ There are 6 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There is 1 port with no output delay specified. (HIGH)
+ There are 32 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

@@ -1,10 +1,10 @@
 #-----------------------------------------------------------
-# Vivado v2015.2.1 (64-bit)
-# SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
-# IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
-# Start of session at: Tue Mar 19 06:44:18 2024
-# Process ID: 4224
-# Log file: C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.runs/synth_1/Top_Wrapper.vds
-# Journal file: C:/DSL4/Micrprocessor/Microprocessor/Microprocessor.runs/synth_1\vivado.jou
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri Mar 29 19:58:51 2024
+# Process ID: 20256
+# Log file: C:/Users/Marco/VGA-Interface/digital_lab/Microprocessor.runs/synth_1/Top_Wrapper.vds
+# Journal file: C:/Users/Marco/VGA-Interface/digital_lab/Microprocessor.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Top_Wrapper.tcl -notrace

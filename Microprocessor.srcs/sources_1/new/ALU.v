@@ -73,6 +73,10 @@ module ALU(
                 //A < B
                 4'hB:
                     Out <= (IN_A < IN_B) ? 8'h01:8'h00;
+                //A%2
+                4'hC: Out <= (IN_A % 2);
+                //B%2
+                4'hD: Out <= (IN_B % 2);
                 //Default A
                 default:
                     Out <= IN_A;
