@@ -42,7 +42,7 @@ module MouseTransceiver(
     reg [7:0] MouseY;
     //////////////////////////////////////////////////////////////////////////////
     // X, Y Limits of Mouse Position e.g. VGA Screen with 160 x 120 resolution
-    parameter [7:0] MouseLimitX = 160;
+    parameter [7:0] MouseLimitX = 194;
     parameter [7:0] MouseLimitY = 120;
     /////////////////////////////////////////////////////////////////////////
     //TriState Signals
