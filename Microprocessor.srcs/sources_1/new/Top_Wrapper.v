@@ -115,7 +115,6 @@ module Top_Wrapper(
 //        .CURR_STATE(CURR_STATE)
         );
 
-
     // Mouse drivers
     Mouse_Driver Mouse_Driver_inst (
         .CLK(CLK),
@@ -146,5 +145,4 @@ module Top_Wrapper(
         .DEC_OUT(DEC_OUT)
     );
     
-
 endmodule
