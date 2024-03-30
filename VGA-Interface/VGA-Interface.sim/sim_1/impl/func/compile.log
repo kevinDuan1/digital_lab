@@ -1,0 +1,13 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Marco/VGA-Interface/VGA-Interface.sim/sim_1/impl/func/VGA_Sig_Gen_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+INFO: [VRFC 10-311] analyzing module VGA_Sig_Gen
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Marco/VGA-Interface/VGA-Interface.srcs/sources_1/new/Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+WARNING: [VRFC 10-1195] overwriting previous definition of module Counter [C:/Users/Marco/VGA-Interface/VGA-Interface.srcs/sources_1/new/Counter.v:23]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Marco/VGA-Interface/VGA-Interface.srcs/sources_1/new/VGA_Sig_Gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VGA_Sig_Gen
+WARNING: [VRFC 10-1195] overwriting previous definition of module VGA_Sig_Gen [C:/Users/Marco/VGA-Interface/VGA-Interface.srcs/sources_1/new/VGA_Sig_Gen.v:23]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Marco/VGA-Interface/VGA-Interface.sim/sim_1/impl/func/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/Marco/VGA-Interface/VGA-Interface.sim/sim_1/impl/func/glbl.v:6]

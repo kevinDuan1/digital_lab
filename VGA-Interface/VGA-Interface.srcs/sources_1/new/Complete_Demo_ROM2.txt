@@ -1,0 +1,93 @@
+@0x00	0x01	// Save value to reg B for Y coordinate
+@0x01	0x00	// Load value from RAM@0x00 (0x00) to reg B
+@0x02	0x03	// Save Y coordinate in reg B to memory address:
+@0x03	0xB1	// Save Y coordinate to VGA interface Y_VAL
+@0x04	0x03	// Save Y coordinate in reg B to memory address:
+@0x05	0x11	// Select memory address RAM@0x11 (current Y coordinate)
+
+@0x06	0x00	// Save value to reg A for X coordinate
+@0x07   0x00	// Load value from RAM@0x00 (0x00) to reg B
+@0x08   0x02	// Save X coordinate in reg A to memory address:
+@0x09	0xB0	// Save X coordinate to VGA interface X_VAL
+@0x0A	0x02	// Save X coordinate in reg A to memory address:
+@0x0B	0x10	// Select memory address RAM@0x10 (current X coordinate)
+
+
+@0x0C   0x00    // Save value to reg A for horizontal line
+@0x0D   0x40	// Load value from RAM@0x40 (Y=40)
+@0x0E   0x01    // Save value to reg B for comparison:
+@0x0F   0x11	// Load value from RAM@0x11 (current Y coordinate)
+@0x10   0x96    // Check if y = 40
+@0x11   0x40    // Branch to pixel data in = 1
+
+@0x12   0x00    // Save value to reg A for horizontal line
+@0x13   0x41	// Load value from RAM@0x41 (Y=80)
+@0x14   0x01    // Save value to reg B for comparison:
+@0x15   0x11	// Load value from RAM@0x11 (current Y coordinate)
+@0x16   0x96    // Check if y = 80
+@0x17   0x40    // Branch to pixel data in = 1
+
+@0x18   0x01    // Save value to reg A for vertical line
+@0x19   0x50    // Load value from RAM@0x50 (X=54)
+@0x1A   0x00    // Save value to reg B for comparison:   
+@0x1B   0x10	// Load value from RAM@0x10 (current X coordinate)
+@0x1C   0x96    // Check if x = 54
+@0X1D   0x40    // Branch to pixel data in = 1
+
+@0x1E   0x01    // Save value to reg A for vertical line
+@0x1F   0x51    // Load value from RAM@0x51 (X=107)
+@0x20   0x00    // Save value to reg B for comparison:   
+@0x21   0x10	// Load value from RAM@0x10 (current X coordinate)
+@0x22   0x96    // Check if x = 107
+@0X23   0x40    // Branch to pixel data in = 1
+
+@0x24   0x01    // Save the X limit value 160 into reg B for comparison
+@0x25   0x13	// Load value from RAM@0x13 to reg B (160)
+@0x26   0x00    // Save value to Reg A
+@0x27   0x10    // Load value from RAM@0x10 to reg A (current X coordinate)
+@0x28   0xA6    // Compare A>B (x > 160), if true branch to:
+@0x29   0x2D    // Check Y limit.
+@0x2A   0x54	// Increment X coordinate by 1
+@0x2B	0x07	// GOTO:
+@0x2C	0x08    // Update X coordinate
+
+@0x2D   0x00    // Save the X limit value 120 into reg A for comparison
+@0x2E   0x12	// Load value from RAM@0x12 to reg A (120)
+@0x2F   0x01    // Save value to Reg B
+@0x30   0x11	// Load value from RAM@0x11 to reg B (current Y coordinate)
+@0x31   0xB6    // Compare B>A (x > 160), if true branch to:
+@0x32   0x00    // To beggining of code
+@0x33   0x65    // Increment Y coordinate by 1
+@0x34   0x07    //Jump to the line of code that stores the value of register
+@0x35   0x02	// Update Y coordinate
+
+@0x40   0x01    // Load FOREGROUND value reg B
+@0x41   0x01	// Load value from RAM@0x01 to reg B (PIXEL_DATA_IN foreground) b
+@0x42   0x03    // Write to memory from reg B
+@0x43   0xB2	// Target address: VGA update pixel data
+@0X44   0x07	// GOTO:
+@0X45   0x24	// Check VGA coordinate limits
+
+// Mouse codes 
+@0xE5   0x00  // status
+@0xE6   0xA0 
+@0xE7   0x02 
+@0xE8   0xF0 
+
+@0xE9   0x00  // x
+@0xEA   0xA1 
+@0xEB   0x02 
+@0xEC   0xD0 
+@0xED   0x02 
+@0xEE   0x60
+
+@0xEF   0x00  // y
+@0xF0   0xA2
+@0xF1   0x02
+@0xF2   0xD1
+@0xF3   0x02
+@0xF4   0x61
+
+@0xF5   0x0A // return
+
+@0xFF   0xE5 //Jump to mouse handler address

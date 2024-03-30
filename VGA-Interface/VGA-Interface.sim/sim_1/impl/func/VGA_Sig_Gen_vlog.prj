@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "VGA_Sig_Gen_func_impl.v"
+verilog xil_defaultlib  "../../../../VGA-Interface.srcs/sources_1/new/Counter.v"
+verilog xil_defaultlib  "../../../../VGA-Interface.srcs/sources_1/new/VGA_Sig_Gen.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
