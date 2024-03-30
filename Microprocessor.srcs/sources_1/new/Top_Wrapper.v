@@ -44,7 +44,7 @@ module Top_Wrapper(
     //Declare wires for the RAM, ROM and Interrupt signals
     wire [7:0] BUS_DATA;
     wire [7:0] BUS_ADDR;
-    wire BUS_WE;
+    wire A;
     
     wire [7:0] ROM_ADDRESS;
     wire [7:0] ROM_DATA;
@@ -58,7 +58,7 @@ module Top_Wrapper(
         .RESET(RESET),
         .BUS_ADDR(BUS_ADDR),
         .BUS_DATA(BUS_DATA),
-        .BUS_WE(BUS_WE),
+        .BUS_WE(A),
         .IR_LED(IR_LED)
         );
     
@@ -76,7 +76,7 @@ module Top_Wrapper(
     //Instantiate the RAM module
     RAM ProcRAM (
         .CLK(CLK),
-        .BUS_WE(BUS_WE),
+        .BUS_WE(A),
         .BUS_ADDR(BUS_ADDR),
         .BUS_DATA(BUS_DATA)
         );
@@ -94,7 +94,7 @@ module Top_Wrapper(
         .RESET(RESET),
         .BUS_DATA(BUS_DATA),
         .BUS_ADDR(BUS_ADDR),
-        .BUS_WE(BUS_WE),
+        .BUS_WE(A),
         .BUS_INTERRUPTS_RAISE(BUS_INTERRUPTS_RAISE [1]),
         .BUS_INTERRUPTS_ACK(BUS_INTERRUPTS_ACK [1])
         );
@@ -105,7 +105,7 @@ module Top_Wrapper(
         .RESET(RESET),
         .BUS_DATA(BUS_DATA),
         .BUS_ADDR(BUS_ADDR),
-        .BUS_WE(BUS_WE),
+        .BUS_WE(A),
         .ROM_ADDRESS(ROM_ADDRESS),
         .ROM_DATA(ROM_DATA),
         .BUS_INTERRUPTS_RAISE(BUS_INTERRUPTS_RAISE),
