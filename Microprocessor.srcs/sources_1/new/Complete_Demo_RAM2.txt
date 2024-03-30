@@ -12,3 +12,6 @@
 
 @0x50   0x56    // X coordinate 54
 @0x51   0x8D    // X coordinate 107
+
+@0x60   0x00    // X coord mouse
+@0x61   0x00    // Y coord mouse
