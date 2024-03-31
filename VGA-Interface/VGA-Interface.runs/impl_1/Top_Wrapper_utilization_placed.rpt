@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sat Mar 30 20:43:32 2024
+| Date         : Sun Mar 31 16:45:12 2024
 | Host         : ASUS-VB running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_Wrapper_utilization_placed.rpt -pb Top_Wrapper_utilization_placed.pb
 | Design       : Top_Wrapper
@@ -31,8 +31,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs              |  800 |     0 |     20800 |  3.85 |
-|   LUT as Logic          |  800 |     0 |     20800 |  3.85 |
+| Slice LUTs              |  796 |     0 |     20800 |  3.83 |
+|   LUT as Logic          |  796 |     0 |     20800 |  3.83 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
 | Slice Registers         |  548 |     0 |     41600 |  1.32 |
 |   Register as Flip Flop |  548 |     0 |     41600 |  1.32 |
@@ -67,20 +67,20 @@ Table of Contents
 +-------------------------------------------------------------+----------+-------+-----------+-------+
 |                          Site Type                          |   Used   | Fixed | Available | Util% |
 +-------------------------------------------------------------+----------+-------+-----------+-------+
-| Slice                                                       |      315 |     0 |      8150 |  3.87 |
-|   SLICEL                                                    |      202 |     0 |           |       |
-|   SLICEM                                                    |      113 |     0 |           |       |
-| LUT as Logic                                                |      800 |     0 |     20800 |  3.85 |
+| Slice                                                       |      321 |     0 |      8150 |  3.94 |
+|   SLICEL                                                    |      198 |     0 |           |       |
+|   SLICEM                                                    |      123 |     0 |           |       |
+| LUT as Logic                                                |      796 |     0 |     20800 |  3.83 |
 |   using O5 output only                                      |        0 |       |           |       |
-|   using O6 output only                                      |      663 |       |           |       |
-|   using O5 and O6                                           |      137 |       |           |       |
+|   using O6 output only                                      |      655 |       |           |       |
+|   using O5 and O6                                           |      141 |       |           |       |
 | LUT as Memory                                               |        0 |     0 |      9600 |  0.00 |
 |   LUT as Distributed RAM                                    |        0 |     0 |           |       |
 |   LUT as Shift Register                                     |        0 |     0 |           |       |
-| LUT Flip Flop Pairs                                         |      897 |     0 |     20800 |  4.31 |
-|   fully used LUT-FF pairs                                   |      383 |       |           |       |
-|   LUT-FF pairs with unused LUT                              |       97 |       |           |       |
-|   LUT-FF pairs with unused Flip Flop                        |      417 |       |           |       |
+| LUT Flip Flop Pairs                                         |      910 |     0 |     20800 |  4.38 |
+|   fully used LUT-FF pairs                                   |      374 |       |           |       |
+|   LUT-FF pairs with unused LUT                              |      114 |       |           |       |
+|   LUT-FF pairs with unused Flip Flop                        |      422 |       |           |       |
 | Unique Control Sets                                         |       32 |       |           |       |
 | Minimum number of registers lost to control set restriction | 36(Lost) |       |           |       |
 +-------------------------------------------------------------+----------+-------+-----------+-------+

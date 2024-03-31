@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sat Mar 30 20:42:58 2024
+| Date         : Sun Mar 31 16:42:53 2024
 | Host         : ASUS-VB running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_Wrapper_utilization_synth.rpt -pb Top_Wrapper_utilization_synth.pb
 | Design       : Top_Wrapper
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 1044 |     0 |     20800 |  5.02 |
-|   LUT as Logic          | 1044 |     0 |     20800 |  5.02 |
+| Slice LUTs*             | 1042 |     0 |     20800 |  5.01 |
+|   LUT as Logic          | 1042 |     0 |     20800 |  5.01 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
 | Slice Registers         |  548 |     0 |     41600 |  1.32 |
 |   Register as Flip Flop |  548 |     0 |     41600 |  1.32 |

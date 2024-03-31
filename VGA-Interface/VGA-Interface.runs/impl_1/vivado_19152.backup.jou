@@ -2,9 +2,9 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sat Mar 30 19:44:30 2024
-# Process ID: 22972
-# Log file: C:/Users/Marco/VGA-Interface/VGA-Interface.runs/impl_1/Top_Wrapper.vdi
-# Journal file: C:/Users/Marco/VGA-Interface/VGA-Interface.runs/impl_1\vivado.jou
+# Start of session at: Sun Mar 31 16:44:30 2024
+# Process ID: 5872
+# Log file: C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.runs/impl_1/Top_Wrapper.vdi
+# Journal file: C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source Top_Wrapper.tcl -notrace
