@@ -191,6 +191,8 @@
       <File Path="$PSRCDIR/sources_1/new/Complete_Demo_ROM2.txt"/>
       <File Path="$PSRCDIR/sources_1/new/Complete_Demo_RAM2.txt"/>
       <File Path="$PSRCDIR/sources_1/new/Complete_Demo_ROM3.txt"/>
+      <File Path="$PSRCDIR/sources_1/new/Complete_Demo_RAM4.txt"/>
+      <File Path="$PSRCDIR/sources_1/new/Complete_Demo_ROM4.txt"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="Top_Wrapper"/>

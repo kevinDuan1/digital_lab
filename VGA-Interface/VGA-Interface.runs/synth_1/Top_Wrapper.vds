@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sun Mar 31 16:41:47 2024
-# Process ID: 16368
+# Start of session at: Sun Mar 31 19:39:29 2024
+# Process ID: 8228
 # Log file: C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.runs/synth_1/Top_Wrapper.vds
 # Journal file: C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -13,17 +13,17 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 263.613 ; gain = 86.734
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 263.359 ; gain = 86.691
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Top_Wrapper' [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/Top_Wrapper.v:23]
 INFO: [Synth 8-638] synthesizing module 'ROM' [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/ROM.v:23]
 	Parameter RAMAddrWidth bound to: 8 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'Complete_Demo_ROM2.txt' is read successfully [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/ROM.v:34]
+INFO: [Synth 8-3876] $readmem data file 'Complete_Demo_ROM4.txt' is read successfully [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/ROM.v:34]
 INFO: [Synth 8-256] done synthesizing module 'ROM' (1#1) [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/ROM.v:23]
 INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/RAM.v:23]
 	Parameter RAMBaseAddr bound to: 0 - type: integer 
 	Parameter RAMAddrWidth bound to: 7 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'Complete_Demo_RAM2.txt' is read successfully [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/RAM.v:43]
+INFO: [Synth 8-3876] $readmem data file 'Complete_Demo_RAM4.txt' is read successfully [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/RAM.v:43]
 INFO: [Synth 8-256] done synthesizing module 'RAM' (2#1) [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/RAM.v:23]
 INFO: [Synth 8-638] synthesizing module 'Processor' [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/Processor.v:23]
 	Parameter IDLE bound to: 8'b11110000 
@@ -90,7 +90,7 @@ INFO: [Synth 8-638] synthesizing module 'Counter__parameterized1' [C:/Users/Marc
 	Parameter COUNTER_WIDTH bound to: 10 - type: integer 
 	Parameter COUNTER_MAX bound to: 10'b1000001001 
 INFO: [Synth 8-256] done synthesizing module 'Counter__parameterized1' (6#1) [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/Counter.v:23]
-WARNING: [Synth 8-350] instance 'CounterV' of module 'Counter' requires 5 connections, but only 4 given [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/VGA_Sig_Gen.v:80]
+WARNING: [Synth 8-350] instance 'CounterV' of module 'Counter' requires 5 connections, but only 4 given [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/VGA_Sig_Gen.v:83]
 INFO: [Synth 8-256] done synthesizing module 'VGA_Sig_Gen' (7#1) [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/VGA_Sig_Gen.v:23]
 INFO: [Synth 8-638] synthesizing module 'Counter__parameterized2' [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/Counter.v:23]
 	Parameter COUNTER_WIDTH bound to: 27 - type: integer 
@@ -173,7 +173,7 @@ INFO: [Synth 8-256] done synthesizing module 'Mouse_Driver' (23#1) [C:/Users/Mar
 WARNING: [Synth 8-350] instance 'Mouse_Driver_inst' of module 'Mouse_Driver' requires 10 connections, but only 9 given [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/Top_Wrapper.v:127]
 INFO: [Synth 8-256] done synthesizing module 'Top_Wrapper' (24#1) [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/Top_Wrapper.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 298.781 ; gain = 121.902
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 299.449 ; gain = 122.781
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -183,7 +183,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 298.781 ; gain = 121.902
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 299.449 ; gain = 122.781
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -197,24 +197,23 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 593.613 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 593.723 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 593.613 ; gain = 416.734
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 593.723 ; gain = 417.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 593.613 ; gain = 416.734
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 593.723 ; gain = 417.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 593.613 ; gain = 416.734
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 593.723 ; gain = 417.055
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "ROM" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.srcs/sources_1/new/ALU.v:39]
 INFO: [Synth 8-802] inferred FSM for state register 'CurrState_reg' in module 'Processor'
 INFO: [Synth 8-5544] ROM "NextProgCounterOffset" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -277,6 +276,7 @@ INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because addre
 INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "TransmitMouseValue_Next" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5562] The signal DATA_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (8 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 INFO: [Synth 8-5562] The signal Mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (7 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
@@ -380,7 +380,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'Curr_State_reg' using enco
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'Curr_State_reg' using encoding 'sequential' in module 'MouseMasterSM'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 593.613 ; gain = 416.734
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 593.723 ; gain = 417.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -399,8 +399,8 @@ Detailed RTL Component Info :
 	   2 Input     17 Bit       Adders := 1     
 	   2 Input     16 Bit       Adders := 2     
 	   2 Input     12 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 2     
-	   2 Input      9 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 3     
 	   3 Input      8 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 3     
 	   2 Input      4 Bit       Adders := 1     
@@ -415,7 +415,8 @@ Detailed RTL Component Info :
 	               17 Bit    Registers := 1     
 	               16 Bit    Registers := 2     
 	               12 Bit    Registers := 1     
-	               10 Bit    Registers := 2     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 25    
 	                7 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
@@ -425,13 +426,14 @@ Detailed RTL Component Info :
 +---RAMs : 
 	              32K Bit         RAMs := 1     
 	             1024 Bit         RAMs := 1     
++---ROMs : 
+	                              ROMs := 1     
 +---Muxes : 
 	  13 Input     24 Bit        Muxes := 1     
 	  10 Input     16 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 1     
 	   5 Input     16 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 4     
-	  79 Input      8 Bit        Muxes := 1     
 	  15 Input      8 Bit        Muxes := 3     
 	   3 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 14    
@@ -476,8 +478,8 @@ Module ROM
 Detailed RTL Component Info : 
 +---Registers : 
 	                8 Bit    Registers := 1     
-+---Muxes : 
-	  79 Input      8 Bit        Muxes := 1     
++---ROMs : 
+	                              ROMs := 1     
 Module RAM 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -542,7 +544,12 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 Module VGA_Sig_Gen 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
 +---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
@@ -721,7 +728,7 @@ BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 593.613 ; gain = 416.734
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 593.723 ; gain = 417.055
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -736,10 +743,11 @@ INFO: [Synth 8-5545] ROM "IRSM/CLK_Reset" won't be mapped to RAM because address
 INFO: [Synth 8-5546] ROM "IRSM/pulse" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "X_DATA" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "LED_Driver_inst/LED_DATA" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5562] The signal ROM/DATA_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (8 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 593.613 ; gain = 416.734
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 593.723 ; gain = 417.055
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 593.613 ; gain = 416.734
+Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 593.723 ; gain = 417.055
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -750,6 +758,15 @@ INFO: [Synth 8-5562] The signal RAM/Mem_reg is implemented as block RAM but is b
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|ROM         | extrom     | 256x8         | Block RAM      | 
+|Top_Wrapper | extrom     | 256x8         | Block RAM      | 
++------------+------------+---------------+----------------+
+
 
 Block RAM:
 +------------+----------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+-------------------------------------+
@@ -765,6 +782,10 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Processor/\CurrProgCounterOffset_reg[1] )
 WARNING: [Synth 8-3332] Sequential element (\CurrProgCounterOffset_reg[1] ) is unused and will be removed from module Processor.
+WARNING: [Synth 8-3332] Sequential element (\VGA_Sig_Gen/ADDRH_reg[1] ) is unused and will be removed from module VGA_Interface.
+WARNING: [Synth 8-3332] Sequential element (\VGA_Sig_Gen/ADDRH_reg[0] ) is unused and will be removed from module VGA_Interface.
+WARNING: [Synth 8-3332] Sequential element (\VGA_Sig_Gen/ADDRV_reg[1] ) is unused and will be removed from module VGA_Interface.
+WARNING: [Synth 8-3332] Sequential element (\VGA_Sig_Gen/ADDRV_reg[0] ) is unused and will be removed from module VGA_Interface.
 WARNING: [Synth 8-3332] Sequential element (\Mouse_transceiver/T/Curr_ByteToSend_reg[7] ) is unused and will be removed from module Mouse_Driver.
 WARNING: [Synth 8-3332] Sequential element (\Mouse_transceiver/T/Curr_ByteToSend_reg[6] ) is unused and will be removed from module Mouse_Driver.
 WARNING: [Synth 8-3332] Sequential element (\Mouse_transceiver/T/Curr_ByteToSend_reg[5] ) is unused and will be removed from module Mouse_Driver.
@@ -783,16 +804,16 @@ Start Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3332] Sequential element (\VGA_Sig_Gen/CounterCLK/count_value_reg[2] ) is unused and will be removed from module VGA_Interface.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 593.613 ; gain = 416.734
+Finished Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 593.723 ; gain = 417.055
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 593.613 ; gain = 416.734
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 593.723 ; gain = 417.055
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 593.613 ; gain = 416.734
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 593.723 ; gain = 417.055
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -800,10 +821,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 593.613 ; gain = 416.734
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 593.723 ; gain = 417.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 593.613 ; gain = 416.734
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 593.723 ; gain = 417.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -817,8 +838,9 @@ Start Technology Mapping
 WARNING: [Synth 8-3332] Sequential element (\Mouse_Driver_inst/Mouse_transceiver/MouseY_reg[7] ) is unused and will be removed from module Top_Wrapper.
 INFO: [Synth 8-4480] The timing for the instance \RAM/Mem_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance \VGA/Frame_Buffer/Mem_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \ROM/DATA_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 621.605 ; gain = 444.727
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 618.715 ; gain = 442.047
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -836,7 +858,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 621.605 ; gain = 444.727
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 618.715 ; gain = 442.047
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -849,7 +871,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 621.605 ; gain = 444.727
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 618.715 ; gain = 442.047
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -861,13 +883,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 621.605 ; gain = 444.727
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 618.715 ; gain = 442.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 621.605 ; gain = 444.727
+Start Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 618.715 ; gain = 442.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 621.605 ; gain = 444.727
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 618.715 ; gain = 442.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -880,66 +902,67 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |BUFG     |     1|
-|2     |CARRY4   |    88|
-|3     |LUT1     |   243|
-|4     |LUT2     |    97|
-|5     |LUT3     |   105|
-|6     |LUT4     |   159|
-|7     |LUT5     |   130|
-|8     |LUT6     |   437|
-|9     |MUXF7    |    12|
-|10    |RAMB18E1 |     1|
-|11    |RAMB36E1 |     1|
-|12    |FDRE     |   528|
-|13    |FDSE     |    20|
-|14    |IBUF     |     4|
-|15    |IOBUF    |     2|
-|16    |OBUF     |    31|
-+------+---------+------+
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     2|
+|2     |CARRY4     |    88|
+|3     |LUT1       |   244|
+|4     |LUT2       |   101|
+|5     |LUT3       |   104|
+|6     |LUT4       |   164|
+|7     |LUT5       |   126|
+|8     |LUT6       |   416|
+|9     |MUXF7      |     5|
+|10    |RAMB18E1   |     1|
+|11    |RAMB18E1_1 |     1|
+|12    |RAMB36E1   |     1|
+|13    |FDRE       |   535|
+|14    |FDSE       |    20|
+|15    |IBUF       |     4|
+|16    |IOBUF      |     2|
+|17    |OBUF       |    31|
++------+-----------+------+
 
 Report Instance Areas: 
 +------+------------------------+--------------------------------+------+
 |      |Instance                |Module                          |Cells |
 +------+------------------------+--------------------------------+------+
-|1     |top                     |                                |  1859|
-|2     |  IRWrapper             |New_Top_Wrapper                 |   286|
+|1     |top                     |                                |  1845|
+|2     |  IRWrapper             |New_Top_Wrapper                 |   283|
 |3     |    Counter             |TENHz_Counter2                  |    84|
-|4     |    IRSM                |IRTransmitterSM2                |   198|
+|4     |    IRSM                |IRTransmitterSM2                |   195|
 |5     |  LED_Driver_inst       |LED_Driver                      |     8|
 |6     |  Mouse_Driver_inst     |Mouse_Driver                    |   506|
 |7     |    Mouse_transceiver   |MouseTransceiver                |   462|
 |8     |      MSM               |MouseMasterSM                   |   152|
 |9     |      R                 |MouseReceiver                   |   139|
 |10    |      T                 |MouseTransmitter                |   104|
-|11    |  Processor             |Processor                       |   322|
+|11    |  Processor             |Processor                       |   297|
 |12    |    ALU0                |ALU                             |    49|
 |13    |  RAM                   |RAM                             |    10|
-|14    |  ROM                   |ROM                             |    73|
+|14    |  ROM                   |ROM                             |    61|
 |15    |  Seven_Seg_Driver_inst |Seven_Seg_Driver                |    94|
 |16    |    RD                  |Register_display                |    78|
 |17    |      Bit17Counter      |Generic_counter                 |    59|
 |18    |      Bit2Counter       |Generic_counter__parameterized0 |    19|
 |19    |  Timer                 |Timer                           |   284|
-|20    |  VGA                   |VGA_Interface                   |   234|
+|20    |  VGA                   |VGA_Interface                   |   259|
 |21    |    Colour_Counter      |Counter__parameterized2         |    94|
 |22    |    Frame_Buffer        |Frame_Buffer                    |     9|
-|23    |    VGA_Sig_Gen         |VGA_Sig_Gen                     |    78|
+|23    |    VGA_Sig_Gen         |VGA_Sig_Gen                     |   103|
 |24    |      CounterCLK        |Counter                         |     6|
-|25    |      CounterH          |Counter__parameterized0         |    35|
-|26    |      CounterV          |Counter__parameterized1         |    27|
+|25    |      CounterH          |Counter__parameterized0         |    39|
+|26    |      CounterV          |Counter__parameterized1         |    33|
 +------+------------------------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:02 . Memory (MB): peak = 621.605 ; gain = 444.727
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 618.715 ; gain = 442.047
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:50 . Memory (MB): peak = 621.605 ; gain = 117.109
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 621.605 ; gain = 444.727
+Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 618.715 ; gain = 115.043
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 618.715 ; gain = 442.047
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 96 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 97 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -948,8 +971,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-157 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+159 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 621.605 ; gain = 413.203
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.157 . Memory (MB): peak = 621.605 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Mar 31 16:42:53 2024...
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 618.715 ; gain = 410.578
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 618.715 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 31 19:40:14 2024...

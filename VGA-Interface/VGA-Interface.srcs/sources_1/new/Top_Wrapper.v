@@ -130,7 +130,7 @@ module Top_Wrapper(
         .BUS_ADDR(BUS_ADDR),
         .BUS_DATA(BUS_DATA),
         .BUS_INTERRUPT_ACK(BUS_INTERRUPTS_ACK[0]),
-        .BUS_INTERRUPT_RAISE(BUS_INTERRUPTS_RAISE [0]),
+        .BUS_INTERRUPT_RAISE(BUS_INTERRUPTS_RAISE[0]),
         .CLK_MOUSE(CLK_MOUSE),
         .DATA_MOUSE(DATA_MOUSE),
         .sensitivity(MouseSensitivity)

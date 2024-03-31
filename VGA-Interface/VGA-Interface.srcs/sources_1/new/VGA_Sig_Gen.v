@@ -64,6 +64,9 @@ module VGA_Sig_Gen(
     wire [9:0] HCounter;
     wire [9:0] VCounter;
     wire TRIGH;
+    reg [9:0] ADDRH;
+    reg [8:0] ADDRV;
+
     
     // Assigns horizontal and vertical values for raster scan of the display 
     Counter # (.COUNTER_WIDTH(10),
@@ -86,7 +89,7 @@ module VGA_Sig_Gen(
     // Create address of next pixel. Concatenate and tie the lookahead address to the frame buffer address
     
     assign DPR_CLK = VGA_CLK;
-    assign VGA_ADDR = {VCounter[8:2], HCounter[9:2]};
+    assign VGA_ADDR = {ADDRV[8:2], ADDRH[9:2]};
     
 
                   
@@ -106,6 +109,20 @@ module VGA_Sig_Gen(
             VGA_VS <= 1;
     end
     
+        always@(posedge VGA_CLK) begin
+        if ((VCounter >= VTBackPorchEnd) && (VCounter <= VTDisplayTimeEnd))
+             ADDRV <= VCounter - VTBackPorchEnd;
+        else 
+            ADDRV <= 0;
+    end
+    
+    always@(posedge VGA_CLK) begin
+        if ((HCounter >= HTBackPorchEnd) && (HCounter <= HTDisplayTimeEnd))
+            ADDRH <= HCounter - HTBackPorchEnd;
+        else 
+            ADDRH <= 0;
+    end
+
     
     //COLOUR OUT    
     always@(posedge CLK) begin
