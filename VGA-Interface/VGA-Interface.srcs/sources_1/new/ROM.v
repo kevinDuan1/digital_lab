@@ -31,7 +31,7 @@ module ROM(
     //Memory
     reg [7:0]ROM[2**RAMAddrWidth-1:0];
     // Load program
-    initial $readmemh("Complete_Demo_ROM2.txt", ROM);
+    initial $readmemh("Complete_Demo_ROM3.txt", ROM);
     //single port ram
     always@(posedge CLK)
         DATA <= ROM[ADDR];
