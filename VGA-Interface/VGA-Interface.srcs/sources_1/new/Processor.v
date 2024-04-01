@@ -196,6 +196,9 @@
         NextRegSelect = CurrRegSelect;
         NextProgContext = CurrProgContext;
         NextInterruptAck = 2'b00;
+        NextRegBContext = CurrRegBContext;
+        NextRegAContext = CurrRegAContext;
+        
         //Case statement to describe each state
         case (CurrState)
             ///////////////////////////////////////////////////////////////////////////////////////
