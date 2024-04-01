@@ -10,18 +10,11 @@
 @0x40   0x28    // Y coordinate 40
 @0x41   0x50    // Y coordinate 80
 
-@0x54   0x36    // X coordinate 54
-@0x17   0x6B    // X coordinate 107
+@0x50   0x36    // X coordinate 54
+@0x51   0x6B    // X coordinate 107
 
-
-// Previous Mouse X and Y Position (For Deletion)
-@0x0A   0x50
-@0x0B   0x3C
-
-@0x14   0x00    //Store pixel information
-
-@0x15   0x00    // Received pixel 0
-@0x16   0x01    // Received pixel 1
+@0x60   0x00    // X coord mouse
+@0x61   0x00    // Y coord mouse
 
 //Car Control Command
 @0x20   0x0A    // FORWARD-LEFT [1010]

@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Mon Apr 01 13:40:44 2024
+| Date         : Mon Apr 01 15:00:35 2024
 | Host         : ASUS-VB running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file Top_Wrapper_timing_summary_routed.rpt -rpx Top_Wrapper_timing_summary_routed.rpx
 | Design       : Top_Wrapper
@@ -50,7 +50,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 513 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
+ There are 506 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
 
  There are 16 register/latch pins with no clock driven by root clock pin: VGA/Colour_Counter/trigger_out_reg/C (HIGH)
 
