@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Mon Apr 01 15:25:04 2024
+| Date         : Mon Apr 01 17:40:02 2024
 | Host         : ASUS-VB running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_Wrapper_utilization_synth.rpt -pb Top_Wrapper_utilization_synth.pb
 | Design       : Top_Wrapper
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 1039 |     0 |     20800 |  5.00 |
-|   LUT as Logic          | 1039 |     0 |     20800 |  5.00 |
+| Slice LUTs*             | 1049 |     0 |     20800 |  5.04 |
+|   LUT as Logic          | 1049 |     0 |     20800 |  5.04 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  555 |     0 |     41600 |  1.33 |
-|   Register as Flip Flop |  555 |     0 |     41600 |  1.33 |
+| Slice Registers         |  571 |     0 |     41600 |  1.37 |
+|   Register as Flip Flop |  571 |     0 |     41600 |  1.37 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                |    5 |     0 |     16300 |  0.03 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 20    |          Yes |         Set |            - |
-| 535   |          Yes |       Reset |            - |
+| 551   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,13 +150,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  535 |        Flop & Latch |
-| LUT6     |  420 |                 LUT |
+| FDRE     |  551 |        Flop & Latch |
+| LUT6     |  430 |                 LUT |
 | LUT1     |  244 |                 LUT |
-| LUT4     |  164 |                 LUT |
-| LUT5     |  128 |                 LUT |
+| LUT4     |  148 |                 LUT |
+| LUT5     |  134 |                 LUT |
+| LUT2     |  105 |                 LUT |
 | LUT3     |  104 |                 LUT |
-| LUT2     |  104 |                 LUT |
 | CARRY4   |   88 |          CarryLogic |
 | OBUF     |   31 |                  IO |
 | FDSE     |   20 |        Flop & Latch |
