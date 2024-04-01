@@ -12,7 +12,6 @@
 @0x0A	0x02	// Save X coordinate in reg A to memory address:
 @0x0B	0x10	// Select memory address RAM@0x10 (current X coordinate)
 
-
 @0x0C   0x00    // Save value to reg A for horizontal line
 @0x0D   0x40	// Load value from RAM@0x40 (Y=40)
 @0x0E   0x01    // Save value to reg B for comparison:
@@ -77,14 +76,14 @@
 // Left
 
 @0x56   0x01    // Load 54 to reg B
-@0x57   0x54    // 54 RAM addr
+@0x57   0x50    // 54 RAM addr
 @0x58   0xB6    // If X < 54, branch
 @0x59   0x60    // ROM addr
 
 // Middle
 
 @0x5A   0x01    // Else if X > 54, load 107 to reg B
-@0x5B   0x17    // 107 RAM addr
+@0x5B   0x51    // 107 RAM addr
 @0x5C   0xB6    // If X < 107, branch
 @0x5D   0x6C    // ROM addr
 
@@ -217,7 +216,7 @@
 
 @0x9C   0x01    // Load FORWARD-RIGHT value to reg B 
 @0x9D   0x26    // FORWARD-RIGHT value RAM addr
-@0X9E   0x07    // Go to IR write
+@0x9E   0x07    // Go to IR write
 @0x9F   0xA8    // IR write ROM addr
 
 // RIGHT
@@ -241,8 +240,8 @@
 @0xA9   0x90    // IR RAM addr
 
 
-@0XAA   0x07	// GOTO:
-@0XAB   0x24	// Check VGA coordinate limits
+@0xAA   0x07	// GOTO:
+@0xAB   0x24	// Check VGA coordinate limits
 
 
 
@@ -272,7 +271,7 @@
 @0xE0   0x00    // read in x
 @0xE1   0xA1    // mouse driver address for x
 @0xE2   0x02    // write to bus
-@0xE3   0xD0    // 7seg dirver address
+@0xE3   0xD0    // 7seg driver address
 @0xE4   0x02    // write to ram
 @0xE5   0x60    // ram address 
 @0xE6   0x02    // write to vga x

@@ -87,24 +87,28 @@ module VGA_Interface(
     
     //Change foregrounf
     always@(posedge C_CLK) begin
-            Colours <= Colours + 16'b0000001000000001;
+            Colours <= Colours + 16'b0000001100000001;
     end
 
 
     always@(posedge CLK) begin
-            if (BUS_ADDRESS == 8'hB0)               // Base address
-                    X_VAL <= BUS_DATA;              // Assign bus data to X values
-            else if (BUS_ADDRESS == 8'hB1)
-                    Y_VAL <= BUS_DATA[6:0];         // Assign bus data to Y values
+            if (BUS_ADDRESS == 8'hB0) begin     // Base address
+                A_WE <= 1'b0;
+                X_VAL <= BUS_DATA;              // Assign bus data to X values
+            end
+            else if (BUS_ADDRESS == 8'hB1) begin
+                A_WE <= 1'b0;
+                Y_VAL <= BUS_DATA[6:0];         // Assign bus data to Y values
+            end
             else if(BUS_ADDRESS == 8'hB2) begin     // High address
-                    A_WE <= 1'b1;                   // Enable writing to frame buffer
-                    PIXEL_DATA_IN <= BUS_DATA[0];   // Assign LSB of bus data to pixel data register
+                A_WE <= 1'b1;                   // Enable writing to frame buffer
+                PIXEL_DATA_IN <= BUS_DATA[0];   // Assign LSB of bus data to pixel data register
             end        
             else begin                              // For when address is not indicating to VGA
-                    A_WE <= 1'b0;                   // Disable writing to frame buffer
-                    PIXEL_DATA_IN <= PIXEL_DATA_IN; // Maintain the pixel data value
-                    X_VAL <= X_VAL;                 // Maintain x and y values
-                    Y_VAL <= Y_VAL;
+                A_WE <= 1'b0;                   // Disable writing to frame buffer
+                PIXEL_DATA_IN <= PIXEL_DATA_IN; // Maintain the pixel data value
+                X_VAL <= X_VAL;                 // Maintain x and y values
+                Y_VAL <= Y_VAL;
             end
     end
 
