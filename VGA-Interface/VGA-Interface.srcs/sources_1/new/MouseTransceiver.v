@@ -173,7 +173,7 @@ module MouseTransceiver(
     wire signed [8:0] MouseNewX;
     wire signed [8:0] MouseNewY;
 
-    assign y_sign = ~MouseStatusRaw[5];
+    assign y_sign = MouseStatusRaw[5];
     //DX and DY are modified to take account of overflow and direction
     assign MouseDx = (MouseStatusRaw[6]) ? (MouseStatusRaw[4] ? {MouseStatusRaw[4], 8'h00} : {MouseStatusRaw[4], 8'hFF}) : {MouseStatusRaw[4], MouseDxRaw[7:0]};
     assign MouseDy = (MouseStatusRaw[7]) ? (y_sign ? {y_sign, 8'h00} : {y_sign, 8'hFF}) : {y_sign, MouseDyRaw[7:0]};
