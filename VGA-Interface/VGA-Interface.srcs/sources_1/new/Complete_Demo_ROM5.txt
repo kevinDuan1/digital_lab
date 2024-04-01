@@ -68,245 +68,26 @@
 @0X54   0x07	// GOTO:
 @0X55   0x24	// Check VGA coordinate limits
 
-// This code section is responsible for initializing and interacting with the Mouse and VGA display.
-// Mouse Initialisation
-@0x56   0x00
-@0x57   0xA0    // Read Value of Mouse into register A
-@0x58   0x02
-@0x59   0xC0    // Write Value of register A to LED Base Address
+// Mouse codes 
+@0xE5   0x00    // read in status
+@0xE6   0xA0    // mouse driver address byte
+@0xE7   0x02    // write to bus (LED)
+@0xE8   0xF0    // LED driver address 
 
-@0x5A   0x00
-@0x5B   0xA3    // Read Value fron Mouse Scroll Wheel and store in register A
-@0x5C   0x02
-@0x5D   0xC1    // Write Value of register A to LED Upper Address
-@0x5E   0x02
-@0x5F   0xB4    // Write Value of register A to VGA Colour
+@0xE9   0x00    // read in x
+@0xEA   0xA1    // mouse driver address for x
+@0xEB   0x02    // write to bus
+@0xEC   0xD0    // 7seg dirver address
+@0xED   0x02    // write to ram
+@0xEE   0x60    // ram address 
 
+@0xEF   0x00    // read in y
+@0xF0   0xA2    // mouse driver address for y
+@0xF1   0x02    // write to bus
+@0xF2   0xD1    // 7 seg driver address 
+@0xF3   0x02    // write to ram
+@0xF4   0x61    // ram address 
 
-@0x60   0x00
-@0x61   0x0A    // Read Previous Mouse X Position from RAM into register A
-@0x62   0x01
-@0x63   0x0B    // Read Previous Mouse Y Position from RAM into register B
-@0x64   0x02
-@0x65   0xB0    // Write Value of register A to VGA X Coordinate
-@0x66   0x03
-@0x67   0xB1    // Write Value of register B to VGA Y Coordinate
-@0x68   0x00
-@0x69   0x14    // Read "0" from RAM and store in register A
-@0x6A   0x02
-@0x6B   0xB2    // Write Value of register A to VGA Pixel
+@0xF5   0x0A    // return
 
-
-// Write Cursor Position to VGA
-@0x6C   0x00
-@0x6D   0xA1    // Read Value of Current Mouse X Position into register A
-@0x6E   0x01
-@0x6F   0xA2    // Read Value of Current Mouse Y Position into register B
-@0x70   0x02
-@0x71   0xD0    // Write Value of register A to 7 Segment (Lower Digits)
-@0x72   0x03
-@0x73   0xD1    // Write Value of register B to 7 Segment (Upper Digits)
-
-@0x74   0x00  
-@0x75   0xA1    // Read Value from Current Mouse X Position and store in register A
-@0x76   0x01
-@0x77   0xA2    // Read Value from Current Mouse Y Position and store in register B
-
-@0x78   0x02
-@0x79   0xB0    // Write Value of register A to VGA X Coordinate
-@0x7A   0x03
-@0x7B   0xB1    // Write Value of register B to VGA Y Coordinate
-
-@0x7C   0x02
-@0x7D   0x0A    // Write Value of register A to RAM Address
-@0x7E   0x03
-@0x7F   0x0B    // Write Value of register B to RAM Address
-
-// A Method can detect the pixel information and delete the previous Mouse path
-@0x80   0x00    
-@0x81   0xB3    // Read the pixel information into register A
-@0x82   0X02    
-@0x83   0X14    // Store the signal from register A in RAM
-   
-@0x84   0x01    // Load 0 to register B
-@0x85   0x15    
-
-@0x86   0x96    // If signal is equal or not
-@0x87   0x38    // Jump to read 1
-
-@0x88   0x00    
-@0x89   0x00    // Read "0" from RAM into register A
-@0x8A   0x02
-@0x8B   0xB2    // Write Value of register A to VGA Pixel
-@0x8C   0x07
-@0x8D	0x3C
-
-@0x8E   0x00    
-@0x8F   0x01    //  Read "1" from RAM into register A
-@0x90   0x02  
-@0x91   0xB2    // Write Value of register A to VGA Pixel
-
-
-
-
-//IR INITIALISATION
-
-//**********Check X position of cursor**********//
-@0x92   0x00
-@0x93   0xA1    // Read value of Live Mouse X Position to Reg A
-
-//Left Side Screen
-@0x94   0x01
-@0x95   0x54    // Load left boundary to Reg B
-@0x96   0xB6    // Check if X coordinate < boundary go to
-@0x97   0x48    // Check Y coordinate
-
-//Middle Side Screen
-@0x98   0x01    // else if, check middle boundary
-@0x99   0x17    // Load middle boundary to Reg B
-@0x9A   0xB6    // Check if X coordinate < boundary go to
-@0x9B   0x54    //Check Y coordinate for middle boundary
-
-// Check Last column
-@0x9C   0x07  //else, go to
-@0x9D   0x60 //Check Y coordinate for right boundary
-
-//**********Check Y position of Cursor for Left Boundary**********//
-@0x9E   0x00
-@0x9F   0xA2    //Read value of Live Mouse Y Position to Reg A
-
-//Top Row of Screen
-@0xA0   0x01
-@0xA1   0x40    //Load Top Y boundary to reg B
-@0xA2   0xB6    //If Y coordinate in reg A  < boundary go to
-@0xA3   0x6C    //ROM Adress for top left command
-
-//Middle Row of Screen
-@0xA4   0x01
-@0xA5   0x41    //else if, load middle boundary to reg B
-@0xA6   0xB6    //Check if Top Row Boundary < Y coordinate < Middle Row Boundary go to
-@0xA7   0x72    //ROM Adress for Left Command
-
-//Bottom Row of Screen
-@0xA8   0x07    //Go to
-@0xA9   0x78    //ROM Address for backward left command
-
-//**********Check Y position of cursor for Middle Boundary**********//
-
-@0xAA   0x00
-@0xAB   0xA2    //Read value of Live Mouse Y Position to Reg A
-
-//Top Row of Screen
-@0xAC   0x01
-@0xAD   0x40    //Load Top Y boundary to reg B
-@0xAE   0xB6    //If Y coordinate in reg A  < boundary go to
-@0xAF   0x7E    //ROM Adress for forward command
-
-//Middle Row of Screen
-@0xB0   0x01
-@0xB1   0x41    //else if, load middle boundary to reg B
-@0xB2   0xB6    //Check if Top Row Boundary < Y coordinate < Middle Row Boundary go to
-@0xB3   0x84    //ROM Adress IDLE command
-
-//Bottom Row of Screen
-@0xB4   0x07    //Go to
-@0xB5   0x8A    //ROM Address for backward command
-
-//**********Check Y position of cursor for Right Boundary**********//
-
-@0xB6   0x00
-@0xB7   0xA2    //Read value of Live Mouse Y Position to Reg A
-
-//Top Row of Screen
-@0xB8  0x01
-@0xB9   0x40    //Load Top Y boundary to reg B
-@0xBA   0xB6    //If Y coordinate in reg A  < boundary go to
-@0xBB   0x90    //ROM Adress for forward right command
-
-//Middle Row of Screen
-@0xBC   0x01
-@0xBD   0x41    //else if, load middle boundary to reg B
-@0xBE   0xB6    //Check if Top Row Boundary < Y coordinate < Middle Row Boundary go to
-@0xBF   0x96    //ROM Adress right command
-
-//Bottom Row of Screen
-@0xC0   0x07    //Go to
-@0xC1   0x9C    //ROM Address for backward right command
-
-//**********CAR COMMAND**********//
-
-//Forward Left Command
-@0xC2   0x01
-@0xC3   0x24    //Load FL command from mem to reg B
-@0xC4   0x03
-@0xC5   0x90    //Load FL command from reg B to IR Transmitter
-@0xC6   0x07    //Jump to check address again
-@0xC7   0xA2    //Check X address
-
-//Left Command
-@0xC8   0x01
-@0xC9   0x22    //Load L command from mem to reg B
-@0xCA   0x03
-@0xCB   0x90    //Load L command from B to IR Transmitter
-@0xCC   0x07    //Jump to check address again
-@0xCD   0xA2    //Check X address
-
-//Backward Left Command
-@0xCE  0x01  
-@0xCF   0x26    //Load BL command from mem to reg B
-@0xD0   0x03
-@0xD1   0x90    //Load BL command from B to IR Transmitter
-@0xD2   0x07    //Jump to check address again
-@0xD3   0xA2    //Check X address
-
-//Forward Command
-@0xD4   0x01
-@0xD5   0x20
-@0xD6   0x03
-@0xD7   0x90
-@0xD8   0x07    //Jump to check address again
-@0xD9   0xA2    //Check X address
-
-//IDLE
-@0xDA   0x01
-@0xDB   0x28
-@0XDC   0x03
-@0xDD   0x90
-@0xDE   0x07    //Jump to check address again
-@0xDF   0xA2    //Check X address
-
-//Backward Command
-@0xE0   0x01
-@0xE1   0x21
-@0xE2   0x03
-@0xE3   0x90
-@0xE4   0x07    //Jump to check address again
-@0xE5   0xA2    //Check X address
-
-//Forward Right Command
-@0xE6   0x01
-@0xE7   0x25
-@0xE8   0x03
-@0xE9   0x90
-@0xEA   0x07    //Jump to check address again
-@0xEB   0xA2    //Check X address
-
-//Right Command
-@0xEC   0x01
-@0xED   0x23
-@0xEF   0x03
-@0xF0   0x90
-@0xF1   0x07    //Jump to check address again
-@0xF2   0xA2    //Check X address
-
-//Backward Right Command
-@0xF3   0x01
-@0xF4   0x27
-@0xF5   0x03
-@0xF6   0x90
-@0xF7   0x07    //Jump to check address again
-@0xF8   0xA2    //Check X address
-
-@0xF9   0x08
-// Mouse Interrupt
-@0xFF   0x00    // Mouse Interrupt Go To
+@0xFF   0xE5    //Jump to mouse handler address
