@@ -49,8 +49,8 @@
     assign BUS_ADDR = CurrBusAddr;
     //The processor has two internal registers to hold data between operations, and a third to hold
     //the current program context when using function calls.
-    reg [7:0] CurrRegA, NextRegA, RegAContext;
-    reg [7:0] CurrRegB, NextRegB, RegBContext;
+    reg [7:0] CurrRegA, NextRegA, CurrRegAContext, NextRegAContext;
+    reg [7:0] CurrRegB, NextRegB, CurrRegBContext, NextRegBContext;
     reg CurrRegSelect, NextRegSelect;
     reg [7:0] CurrProgContext, NextProgContext;
     //Dedicated Interrupt output lines - one for each interrupt line
@@ -164,8 +164,8 @@
             CurrRegSelect = 1'b0;
             CurrProgContext = 8'h00;
             CurrInterruptAck = 2'b00;
-            RegAContext = 8'h00;
-            RegBContext = 8'h00;
+            CurrRegAContext = 8'h00;
+            CurrRegAContext = 8'h00;
         end else begin
             CurrState = NextState;
             CurrProgCounter = NextProgCounter;
@@ -178,6 +178,8 @@
             CurrRegSelect = NextRegSelect;
             CurrProgContext = NextProgContext;
             CurrInterruptAck = NextInterruptAck;
+            CurrRegAContext = NextRegAContext;
+            CurrRegBContext = NextRegBContext;
         end
     end
     //Combinatorial section � large!
@@ -251,8 +253,8 @@
             else begin
                 NextState=IDLE;    
                 NextProgContext = CurrProgCounter;
-                RegAContext = CurrRegA;
-                RegBContext = CurrRegB;
+                NextRegAContext = CurrRegA;
+                NextRegBContext = CurrRegB;
             end
         end
         ///////////////////////////////////////////////////////////////////////////////////////
@@ -413,8 +415,8 @@
         RETURN: begin
             NextState = RETURN_0;
             NextProgCounter = CurrProgContext;
-            NextRegA = RegAContext;
-            NextRegB = RegBContext;
+            NextRegA = CurrRegAContext;
+            NextRegB = CurrRegBContext;
         end
         
         RETURN_0: NextState = CHOOSE_OPP; //returns to choose operation state
