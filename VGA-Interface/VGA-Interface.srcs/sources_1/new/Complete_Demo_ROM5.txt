@@ -217,7 +217,7 @@
 
 @0x9C   0x01    // Load FORWARD-RIGHT value to reg B 
 @0x9D   0x26    // FORWARD-RIGHT value RAM addr
-@0X9E   0x07    // Go to IR write
+@0x9E   0x07    // Go to IR write
 @0x9F   0xA8    // IR write ROM addr
 
 // RIGHT
@@ -241,8 +241,8 @@
 @0xA9   0x90    // IR RAM addr
 
 
-@0XAA   0x07	// GOTO:
-@0XAB   0x24	// Check VGA coordinate limits
+@0xAA   0x07	// GOTO:
+@0xAB   0x24	// Check VGA coordinate limits
 
 
 
