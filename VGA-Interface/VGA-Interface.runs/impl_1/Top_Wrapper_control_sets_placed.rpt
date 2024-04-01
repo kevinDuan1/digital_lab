@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Mon Apr 01 12:56:03 2024
+| Date         : Mon Apr 01 13:05:22 2024
 | Host         : ASUS-VB running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Wrapper_control_sets_placed.rpt
 | Design       : Top_Wrapper
@@ -33,12 +33,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              50 |           22 |
+| No           | No                    | No                     |              50 |           24 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             243 |           92 |
+| No           | Yes                   | No                     |             243 |           93 |
 | Yes          | No                    | No                     |              37 |           11 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             233 |           84 |
+| Yes          | Yes                   | No                     |             233 |           93 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -50,38 +50,38 @@ Table of Contents
 +-------------------------+----------------------------------------------------------------------+-------------------------------------------------------+------------------+----------------+
 |  CLK_IBUF_BUFG          | Processor/COMMAND0                                                   | RESET_IBUF                                            |                2 |              4 |
 |  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/R/Curr_BitCounter[3]_i_1_n_0     | RESET_IBUF                                            |                2 |              4 |
-|  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/MSM/MouseY_reg[2]                |                                                       |                2 |              4 |
+|  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/MSM/MouseY_reg[2]                |                                                       |                1 |              4 |
 |  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/MSM/MouseY_reg[2]                | Mouse_Driver_inst/Mouse_transceiver/MouseX[7]_i_1_n_0 |                2 |              5 |
-|  CLK_IBUF_BUFG          | Processor/FSM_sequential_CurrState[5]_i_1_n_0                        | RESET_IBUF                                            |                4 |              6 |
-|  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/MSM/MouseY_reg[2]                | RESET_IBUF                                            |                2 |              6 |
+|  CLK_IBUF_BUFG          | Processor/FSM_sequential_CurrState[5]_i_1_n_0                        | RESET_IBUF                                            |                5 |              6 |
+|  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/MSM/MouseY_reg[2]                | RESET_IBUF                                            |                1 |              6 |
 |  CLK_IBUF_BUFG          | Processor/Y_VAL_reg[6][0]                                            |                                                       |                2 |              7 |
 |  VGA_CLK                |                                                                      | VGA/VGA_Sig_Gen/CounterV/SR[0]                        |                3 |              7 |
-|  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/MSM/Curr_Status[7]_i_1_n_0       | RESET_IBUF                                            |                2 |              8 |
-|  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/MSM/Curr_Dx[7]_i_1_n_0           | RESET_IBUF                                            |                2 |              8 |
-|  CLK_IBUF_BUFG          |                                                                      | VGA/VGA_Sig_Gen/CounterH/VGA_COLOUR_reg[0]            |                2 |              8 |
-|  CLK_IBUF_BUFG          | Processor/CurrBusDataOutWE_i_1_n_0                                   | RESET_IBUF                                            |                3 |              8 |
-|  CLK_IBUF_BUFG          | Processor/CurrProgCounter[7]_i_1_n_0                                 | RESET_IBUF                                            |                5 |              8 |
-|  CLK_IBUF_BUFG          | Processor/CurrRegA[7]_i_1_n_0                                        | RESET_IBUF                                            |                3 |              8 |
+|  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/MSM/Curr_Status[7]_i_1_n_0       | RESET_IBUF                                            |                3 |              8 |
+|  CLK_IBUF_BUFG          |                                                                      | VGA/VGA_Sig_Gen/CounterH/VGA_COLOUR_reg[0]            |                1 |              8 |
+|  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/MSM/Curr_Dx[7]_i_1_n_0           | RESET_IBUF                                            |                3 |              8 |
+|  CLK_IBUF_BUFG          | Processor/CurrProgCounter[7]_i_1_n_0                                 | RESET_IBUF                                            |                6 |              8 |
+|  CLK_IBUF_BUFG          | Processor/CurrProgContext[7]_i_1_n_0                                 | RESET_IBUF                                            |                5 |              8 |
+|  CLK_IBUF_BUFG          | Processor/CurrBusDataOutWE_i_1_n_0                                   | RESET_IBUF                                            |                4 |              8 |
 |  CLK_IBUF_BUFG          | Processor/CurrRegB[7]_i_1_n_0                                        | RESET_IBUF                                            |                3 |              8 |
-|  CLK_IBUF_BUFG          | Processor/CurrProgContext[7]_i_1_n_0                                 | RESET_IBUF                                            |                4 |              8 |
+|  CLK_IBUF_BUFG          | Processor/CurrRegA[7]_i_1_n_0                                        | RESET_IBUF                                            |                4 |              8 |
 |  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/Timer/p_0_in                     |                                                       |                2 |              8 |
 |  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/MSM/Curr_Dy[7]_i_1_n_0           | RESET_IBUF                                            |                3 |              8 |
 |  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/R/Curr_MSCodeShiftReg[7]_i_1_n_0 | RESET_IBUF                                            |                4 |              8 |
-|  CLK_IBUF_BUFG          | Processor/LED_DATA_reg[7][0]                                         | RESET_IBUF                                            |                3 |              8 |
-|  CLK_IBUF_BUFG          | Processor/E[0]                                                       | RESET_IBUF                                            |                3 |              8 |
-|  CLK_IBUF_BUFG          | Processor/X_DATA_reg[7][0]                                           | RESET_IBUF                                            |                1 |              8 |
-|  CLK_IBUF_BUFG          | Processor/Y_DATA_reg[7][0]                                           | RESET_IBUF                                            |                2 |              8 |
-|  CLK_IBUF_BUFG          | Processor/X_VAL_reg[7]_0[0]                                          |                                                       |                1 |              8 |
+|  CLK_IBUF_BUFG          | Processor/Y_DATA_reg[7][0]                                           | RESET_IBUF                                            |                3 |              8 |
+|  CLK_IBUF_BUFG          | Processor/X_VAL_reg[7]_0[0]                                          |                                                       |                2 |              8 |
+|  CLK_IBUF_BUFG          | Processor/LED_DATA_reg[7][0]                                         | RESET_IBUF                                            |                5 |              8 |
+|  CLK_IBUF_BUFG          | Processor/E[0]                                                       | RESET_IBUF                                            |                4 |              8 |
+|  CLK_IBUF_BUFG          | Processor/X_DATA_reg[7][0]                                           | RESET_IBUF                                            |                2 |              8 |
 |  VGA_CLK                |                                                                      | VGA/VGA_Sig_Gen/CounterH/SR[0]                        |                3 |              8 |
 |  VGA_CLK                | VGA/VGA_Sig_Gen/CounterH/TRIGH                                       |                                                       |                4 |             10 |
-|  VGA_CLK                |                                                                      |                                                       |                4 |             11 |
-|  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/T/Curr_SendCounter[15]_i_1_n_0   | RESET_IBUF                                            |                6 |             16 |
+|  VGA_CLK                |                                                                      |                                                       |                3 |             11 |
+|  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/T/Curr_SendCounter[15]_i_1_n_0   | RESET_IBUF                                            |                5 |             16 |
 |  VGA/Colour_Counter/I51 |                                                                      |                                                       |                4 |             16 |
-|  CLK_IBUF_BUFG          |                                                                      |                                                       |               14 |             23 |
+|  CLK_IBUF_BUFG          |                                                                      |                                                       |               17 |             23 |
 |  CLK_IBUF_BUFG          | Mouse_Driver_inst/Mouse_transceiver/MSM/Curr_Counter[23]_i_1_n_0     | RESET_IBUF                                            |               10 |             24 |
-|  CLK_IBUF_BUFG          | Timer/TargetReached1                                                 | RESET_IBUF                                            |               10 |             32 |
+|  CLK_IBUF_BUFG          | Timer/TargetReached1                                                 | RESET_IBUF                                            |                9 |             32 |
 |  CLK_IBUF_BUFG          | Timer/0]_i_2_n_0                                                     | Processor/Timer_reg[31]                               |                8 |             32 |
-|  CLK_IBUF_BUFG          |                                                                      | RESET_IBUF                                            |               84 |            220 |
+|  CLK_IBUF_BUFG          |                                                                      | RESET_IBUF                                            |               86 |            220 |
 +-------------------------+----------------------------------------------------------------------+-------------------------------------------------------+------------------+----------------+
 
 
