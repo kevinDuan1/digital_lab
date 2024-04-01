@@ -16,6 +16,9 @@
 @0x60   0x00    // X coord mouse
 @0x61   0x00    // Y coord mouse
 
+@0x62   0x00    // X VGA coord mouse
+@0x63   0x00    // Y VGA coord mouse
+
 //Car Control Command
 @0x20   0x0A    // FORWARD-LEFT [1010]
 @0x21   0x02    // LEFT [0010]

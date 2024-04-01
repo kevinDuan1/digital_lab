@@ -12,7 +12,6 @@
 @0x0A	0x02	// Save X coordinate in reg A to memory address:
 @0x0B	0x10	// Select memory address RAM@0x10 (current X coordinate)
 
-
 @0x0C   0x00    // Save value to reg A for horizontal line
 @0x0D   0x40	// Load value from RAM@0x40 (Y=40)
 @0x0E   0x01    // Save value to reg B for comparison:
@@ -272,7 +271,7 @@
 @0xE0   0x00    // read in x
 @0xE1   0xA1    // mouse driver address for x
 @0xE2   0x02    // write to bus
-@0xE3   0xD0    // 7seg dirver address
+@0xE3   0xD0    // 7seg driver address
 @0xE4   0x02    // write to ram
 @0xE5   0x60    // ram address 
 @0xE6   0x02    // write to vga x
