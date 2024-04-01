@@ -40,7 +40,7 @@ module RAM(
     //Memory
     reg [7:0] Mem [2**RAMAddrWidth-1:0];
     // Initialise the memory for data preloading, initialising variables, and declaring constants
-    initial $readmemh("Complete_Demo_RAM4.txt", Mem);
+    initial $readmemh("Complete_Demo_RAM2.txt", Mem);
     //single port ram
     always@(posedge CLK) begin
     // Brute-force RAM address decoding. Think of a simpler way...

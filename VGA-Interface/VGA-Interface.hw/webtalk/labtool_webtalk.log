@@ -4,9 +4,9 @@
   **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 
-source C:/Users/Marco/VGA-Interface/VGA-Interface.hw/webtalk/labtool_webtalk.tcl -notrace
+source C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.hw/webtalk/labtool_webtalk.tcl -notrace
 
     while executing
-"webtalk_transmit -clientid 2750514806 -regid "212550022_0_0_309" -xml C:/Users/Marco/VGA-Interface/VGA-Interface.hw/webtalk/usage_statistics_ext_labto..."
-    (file "C:/Users/Marco/VGA-Interface/VGA-Interface.hw/webtalk/labtool_webtalk.tcl" line 28)
-INFO: [Common 17-206] Exiting Webtalk at Sat Mar 30 20:32:54 2024...
+"webtalk_transmit -clientid 4102938030 -regid "212550022_0_0_309" -xml C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.hw/webtalk/usage_statisti..."
+    (file "C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.hw/webtalk/labtool_webtalk.tcl" line 28)
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr 01 12:50:37 2024...
