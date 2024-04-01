@@ -1,0 +1,214 @@
+@0x00	0x01	// Save value to reg B for Y coordinate
+@0x01	0x00	// Load value from RAM@0x00 (0x00) to reg B
+@0x02	0x03	// Save Y coordinate in reg B to memory address:
+@0x03	0xB1	// Save Y coordinate to VGA interface Y_VAL
+@0x04	0x03	// Save Y coordinate in reg B to memory address:
+@0x05	0x11	// Select memory address RAM@0x11 (current Y coordinate)
+
+@0x06	0x00	// Save value to reg A for X coordinate
+@0x07   0x00	// Load value from RAM@0x00 (0x00) to reg B
+@0x08   0x02	// Save X coordinate in reg A to memory address:
+@0x09	0xB0	// Save X coordinate to VGA interface X_VAL
+@0x0A	0x02	// Save X coordinate in reg A to memory address:
+@0x0B	0x10	// Select memory address RAM@0x10 (current X coordinate)
+
+
+@0x0C   0x00    // Save value to reg A for horizontal line
+@0x0D   0x40	// Load value from RAM@0x40 (Y=40)
+@0x0E   0x01    // Save value to reg B for comparison:
+@0x0F   0x11	// Load value from RAM@0x11 (current Y coordinate)
+@0x10   0x96    // Check if y = 40
+@0x11   0x40    // Branch to pixel data in = 1
+
+@0x12   0x00    // Save value to reg A for horizontal line
+@0x13   0x41	// Load value from RAM@0x41 (Y=80)
+@0x14   0x01    // Save value to reg B for comparison:
+@0x15   0x11	// Load value from RAM@0x11 (current Y coordinate)
+@0x16   0x96    // Check if y = 80
+@0x17   0x40    // Branch to pixel data in = 1
+
+@0x18   0x01    // Save value to reg A for vertical line
+@0x19   0x50    // Load value from RAM@0x50 (X=54)
+@0x1A   0x00    // Save value to reg B for comparison:   
+@0x1B   0x10	// Load value from RAM@0x10 (current X coordinate)
+@0x1C   0x96    // Check if x = 54
+@0X1D   0x40    // Branch to pixel data in = 1
+
+@0x1E   0x01    // Save value to reg A for vertical line
+@0x1F   0x51    // Load value from RAM@0x51 (X=107)
+@0x20   0x00    // Save value to reg B for comparison:   
+@0x21   0x10	// Load value from RAM@0x10 (current X coordinate)
+@0x22   0x96    // Check if x = 107
+@0X23   0x40    // Branch to pixel data in = 1
+
+@0x24   0x01    // Save the X limit value 160 into reg B for comparison
+@0x25   0x13	// Load value from RAM@0x13 to reg B (160)
+@0x26   0x00    // Save value to Reg A
+@0x27   0x10    // Load value from RAM@0x10 to reg A (current X coordinate)
+@0x28   0xA6    // Compare A>B (x > 160), if true branch to:
+@0x29   0x2D    // Check Y limit.
+@0x2A   0x54	// Increment X coordinate by 1
+@0x2B	0x07	// GOTO:
+@0x2C	0x08    // Update X coordinate
+
+@0x2D   0x00    // Save the X limit value 120 into reg A for comparison
+@0x2E   0x12	// Load value from RAM@0x12 to reg A (120)
+@0x2F   0x01    // Save value to Reg B
+@0x30   0x11	// Load value from RAM@0x11 to reg B (current Y coordinate)
+@0x31   0xB6    // Compare B>A (x > 160), if true branch to:
+@0x32   0x00    // To beggining of code
+@0x33   0x65    // Increment Y coordinate by 1
+@0x34   0x07    //Jump to the line of code that stores the value of register
+@0x35   0x02	// Update Y coordinate
+
+@0x40   0x01    // Load FOREGROUND value reg B
+@0x41   0x01	// Load value from RAM@0x01 to reg B (PIXEL_DATA_IN foreground) b
+@0x42   0x03    // Write to memory from reg B
+@0x43   0xB2	// Target address: VGA update pixel data
+@0X44   0x07	// GOTO:
+@0X45   0x24	// Check VGA coordinate limits
+
+// Mouse codes + IR codes
+
+@0x50   0x00 // Load mouse status to reg A
+@0x51   0xA0 // Mouse RAM addr
+@0x52   0x02 // Write reg A value 
+@0x53   0xF0 // Mouse RAM addr
+
+@0x54   0x00 // Load mouse X to reg A
+@0x55   0xA1 // Mouse RAM addr
+@0x56   0x02 // Write reg A value
+@0x57   0xD0 // Seg7 RAM addr
+@0x58   0x02 // Wrtie reg A value
+@0x59   0x60 // X coords mouse RAM addr
+
+// Determine the grid square (X axis)
+
+@0x5A	0x01 // Load 54 to reg B
+@0x5B	0x50 // 54 RAM addr
+@0x5C	0xB6 // If X < 54, branch
+@0x5D	0x66 // ROM addr
+@0x5E	0x01 // Load 107 to reg B
+@0x5F	0x51 // 107 RAM addr
+@0x60	0xB6 // If X < 107, branch
+@0x61	0x70 // ROM addr
+@0x62	0x07 // X > 107 so go to
+@0x63	0x7E // ROM addr
+
+
+@0x64   0x00 // Load mouse Y to reg A
+@0x65   0xA2 // Mouse RAM addr
+@0x66   0x02 // Write reg A value
+@0x67   0xD1 // Seg7 RAM addr
+@0x68   0x02 // Write reg A value
+@0x69   0x61 // Y coords mouse RAM addr
+
+
+// Determine grid square (direction)
+// X < 54
+
+@0x6A   0x01 // Load 40 to reg B
+@0x6B   0x40 // 40 RAM addr
+@0x6C   0xB6 // If Y < 40, branch
+@0x6D   0x88 // FORWARD-LEFT direction ROM addr
+@0x6E   0x01 // Load 80 to reg B
+@0x6F   0x41 // 80 RAM addr
+@0x70   0xB6 // If Y < 80, branch
+@0x71   0x8C // LEFT direction ROM addr
+@0x72   0x07 // Y > 80 so go to
+@0x73   0x90 // BACKWARD-LEFT direction ROM addr
+
+// 54 < X < 107
+
+@0x74   0x01 // Load 40 to reg B
+@0x75   0x40 // 40 RAM addr
+@0x76   0xB6 // If Y < 40, branch
+@0x77   0x94 // FORWARD direction ROM addr
+@0x78   0x01 // Load 80 to reg B
+@0x79   0x41 // 80 RAM addr
+@0x7A   0xB6 // If Y < 80, branch
+@0x7B   0x98 // IDLE direction ROM addr
+@0x7C   0x07 // Y > 80 so go to
+@0x7D   0x9C // BACKWARD direction ROM addr
+
+// X > 107
+
+@0x7E   0x01 // Load 40 to reg B
+@0x7F   0x40 // 40 RAM addr
+@0x80   0xB6 // If Y < 40, branch
+@0x81   0xA0 // FORWARD-RIGHT direction ROM addr
+@0x82   0x01 // Load 80 to reg B
+@0x83   0x41 // 80 RAM addr
+@0x84   0xB6 // If Y < 80, branch
+@0x85   0xA4 // RIGHT direction ROM addr
+@0x86   0x07 // Y > 80 so go to
+@0x87   0xA8 // BACKWARD-RIGHT direction ROM addr
+
+
+// Direction write
+// FORWARD-LEFT
+
+@0x88   0x00 // Load FORWARD-LEFT value to reg A
+@0x89   0x70 // FORWARD-LEFT RAM addr
+@0x8A   0x07 // Go to writing command to IR
+@0x8B   0xAC // IR write ROM addr
+
+// LEFT
+@0x8C   0x00 // Load LEFT value to reg A
+@0x8D   0x71 // LEFT RAM addr
+@0x8E   0x07 // Go to writing command to IR
+@0x8F   0xAC // IR write ROM addr
+
+// BACKWARD-LEFT
+@0x90   0x00 // Load BACKWARD-LEFT value to reg A
+@0x91   0x72 // BACKWARD-LEFT RAM addr
+@0x92   0x07 // Go to writing command to IR
+@0x93   0xAC // IR write ROM addr
+
+// FORWARD
+@0x94   0x00 // Load FORWARD value to reg A
+@0x95   0x73 // FORWARD RAM addr
+@0x96   0x07 // Go to writing command to IR
+@0x97   0xAC // IR write ROM addr
+
+// IDLE
+@0x98   0x00 // Load IDLE value to reg A
+@0x99   0x74 // IDLE RAM addr
+@0x9A   0x07 // Go to writing command to IR
+@0x9B   0xAC // IR write ROM addr
+
+// BACKWARD
+@0x9C   0x00 // Load BACKWARD value to reg A
+@0x9D   0x75 // BACKWARD RAM addr
+@0x9E   0x07 // Go to writing command to IR
+@0x9F   0xAC // IR write ROM addr
+
+// FORWARD-RIGHT
+@0xA0   0x00 // Load FORWARD-RIGHT value to reg A
+@0xA1   0x76 // FORWARD-RIGHT RAM addr
+@0xA2   0x07 // Go to writing command to IR
+@0xA3   0xAC // IR write ROM addr
+
+// RIGHT
+@0xA4   0x00 // Load RIGHT value to reg A
+@0xA5   0x77 // RIGHT RAM addr
+@0xA6   0x07 // Go to writing command to IR
+@0xA7   0xAC // IR write ROM addr
+
+// BACKWARD-RIGHT
+@0xA8   0x00 // Load BACKWARD-RIGHT value to reg A
+@0xA9   0x78 // BACKWARD-RIGHT RAM addr
+@0xAA   0x07 // Go to writing command to IR
+@0xAB   0xAC // IR write ROM addr
+
+
+//Write IR command
+@0xAC	0x02 // Write direction value in reg A
+@0xAD	0x90 // IR RAM addr
+
+@0xF5   0x0A // return
+
+@0xFF   0xE5 //Jump to mouse handler address
+
+
+
