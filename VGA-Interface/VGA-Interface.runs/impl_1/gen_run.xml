@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1712050985">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1712051984">
   <File Type="OPT-DCP" Name="Top_Wrapper_opt.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
@@ -227,6 +227,7 @@
     <File Path="$PSRCDIR/sources_1/new/Complete_Demo_ROM4.txt"/>
     <File Path="$PSRCDIR/sources_1/new/Complete_Demo_ROM5.txt"/>
     <File Path="$PSRCDIR/sources_1/new/Complete_Demo_RAM5.txt"/>
+    <File Path="$PSRCDIR/sources_1/new/Complete_demo_ROM6.txt"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="Top_Wrapper"/>
