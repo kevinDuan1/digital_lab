@@ -29,3 +29,6 @@
 @0x26   0x09    // FORWARD-RIGHT [1001]
 @0x27   0x01    // RIGHT [0001]
 @0x28   0x05    // BACKWARD-RIGHT [0101]
+
+// Mouse
+@0x0A   0x01    // mask to select least significant bit 

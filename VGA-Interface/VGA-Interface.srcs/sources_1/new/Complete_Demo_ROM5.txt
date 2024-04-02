@@ -67,230 +67,244 @@
 
 
 // IR
+@0x54   0x00    // load flag
+@0x55   0x0B     
+@0x56   0x01    // load 1
+@0x57   0x01 
+@0x58   0x96  
+@0x59   0x62 
+@0x5A   0x07	// GOTO:
+@0x5B   0x24	// Check VGA coordinate limits
 
 // Check X axis
-
-@0x54   0x00    // Load mouse X to reg A
-@0x55   0x60    // Mouse X coords RAM addr
+@0x5C   0x00    // Load mouse X to reg A
+@0x5D   0x60    // Mouse X coords RAM addr
 
 // Left
 
-@0x56   0x01    // Load 54 to reg B
-@0x57   0x50    // 54 RAM addr
-@0x58   0xB6    // If X < 54, branch
-@0x59   0x60    // ROM addr
+@0x5E   0x01    // Load 54 to reg B
+@0x5F   0x50    // 54 RAM addr
+@0x60   0xB6    // If X < 54, branch
+@0x61   0x60    // ROM addr
 
 // Middle
 
-@0x5A   0x01    // Else if X > 54, load 107 to reg B
-@0x5B   0x51    // 107 RAM addr
-@0x5C   0xB6    // If X < 107, branch
-@0x5D   0x6C    // ROM addr
+@0x62   0x01    // Else if X > 54, load 107 to reg B
+@0x63   0x51    // 107 RAM addr
+@0x64   0xB6    // If X < 107, branch
+@0x65   0x6C    // ROM addr
 
 // Right
 
-@0x5E   0x07    // Else, X > 107 so go to
-@0x5F   0x78    // ROM addr
+@0x66   0x07    // Else, X > 107 so go to
+@0x67   0x78    // ROM addr
 
 
 // Check Y axis (X < 54)
 
-@0x60   0x00    // Load mouse Y to reg A
-@0x61   0x61    // Mouse Y coords RAM addr
+@0x68   0x00    // Load mouse Y to reg A
+@0x69   0x61    // Mouse Y coords RAM addr
 
 // Top
 
-@0x62   0x01    // Load 40 to reg B
-@0x63   0x40    // 40 RAM addr
-@0x64   0xB6    // If Y < 40, branch
-@0x65   0x84    // FORWARD-LEFT direction ROM addr
+@0x6A   0x01    // Load 40 to reg B
+@0x6B   0x40    // 40 RAM addr
+@0x6C   0xB6    // If Y < 40, branch
+@0x6D   0x84    // FORWARD-LEFT direction ROM addr
 
 // Middle
 
-@0x66   0x01    // Else if X > 40, load 80 to reg B
-@0x67   0x41    // 80 RAM addr
-@0x68   0xB6    // If Y < 80, branch
-@0x69   0x88    // LEFT direction ROM addr
+@0x6E   0x01    // Else if X > 40, load 80 to reg B
+@0x6F   0x41    // 80 RAM addr
+@0x70   0xB6    // If Y < 80, branch
+@0x71   0x88    // LEFT direction ROM addr
 
 // Bottom
 
-@0x6A   0x07    // Else, Y > 80 so go to
-@0x6B   0x8C    // BACKWARD-LEFT direction ROM addr
+@0x72   0x07    // Else, Y > 80 so go to
+@0x73   0x8C    // BACKWARD-LEFT direction ROM addr
 
 
 // Check Y axis (54 < X < 107)
 
-@0x6C   0x00    // Load mouse Y to reg A
-@0x6D   0x61    // Mouse Y coords RAM addr
+@0x74   0x00    // Load mouse Y to reg A
+@0x75   0x61    // Mouse Y coords RAM addr
 
 // Top
 
-@0x6E   0x01    // Load 40 to reg B
-@0x6F   0x40    // 40 RAM addr
-@0x70   0xB6    // If Y < 40, branch
-@0x71   0x90    // FORWARD direction ROM addr
+@0x76   0x01    // Load 40 to reg B
+@0x77   0x40    // 40 RAM addr
+@0x78   0xB6    // If Y < 40, branch
+@0x79   0x90    // FORWARD direction ROM addr
 
 // Middle
 
-@0x72   0x01    // Else if X > 40, load 80 to reg B
-@0x73   0x41    // 80 RAM addr
-@0x74   0xB6    // If Y < 80, branch
-@0x75   0x94    // IDLE direction ROM addr
+@0x7A   0x01    // Else if X > 40, load 80 to reg B
+@0x7B   0x41    // 80 RAM addr
+@0x7C   0xB6    // If Y < 80, branch
+@0x7D   0x94    // IDLE direction ROM addr
 
 // Bottom
 
-@0x76   0x07    // Else, Y > 80 so go to
-@0x77   0x98    // BACKWARD direction ROM addr
+@0x7E   0x07    // Else, Y > 80 so go to
+@0x7F   0x98    // BACKWARD direction ROM addr
 
 
 // Check Y axis (X > 107)
 
-@0x78   0x00    // Load mouse Y to reg A
-@0x79   0x61    // Mouse Y coords RAM addr
+@0x80   0x00    // Load mouse Y to reg A
+@0x81   0x61    // Mouse Y coords RAM addr
 
 // Top
 
-@0x7A   0x01    // Load 40 to reg B
-@0x7B   0x40    // 40 RAM addr
-@0x7C   0xB6    // If Y < 40, branch
-@0x7D   0x9C    // FORWARD-RIGHT direction ROM addr
+@0x82   0x01    // Load 40 to reg B
+@0x83   0x40    // 40 RAM addr
+@0x84   0xB6    // If Y < 40, branch
+@0x85   0x9C    // FORWARD-RIGHT direction ROM addr
 
 // Middle
 
-@0x7E   0x01    // Else if X > 40, load 80 to reg B
-@0x7F   0x41    // 80 RAM addr
-@0x80   0xB6    // If Y < 80, branch
-@0x81   0xA0    // RIGHT direction ROM addr
+@0x86   0x01    // Else if X > 40, load 80 to reg B
+@0x87   0x41    // 80 RAM addr
+@0x88   0xB6    // If Y < 80, branch
+@0x89   0xA0    // RIGHT direction ROM addr
 
 // Bottom
 
-@0x82   0x07    // Else, Y > 80 so go to
-@0x83   0xA4    // BACKWARD-RIGHT direction ROM addr
+@0x8A   0x07    // Else, Y > 80 so go to
+@0x8B   0xA4    // BACKWARD-RIGHT direction ROM addr
 
 
 // Direction
 
 // FORWARD-LEFT
 
-@0x84   0x01    // Load FORWARD-LEFT value to reg B
-@0x85   0x20    // FORWARD-LEFT value RAM addr
-@0x86   0x07    // Go to IR write
-@0x87   0xA8    // IR write ROM addr
-
-//LEFT
-
-@0x88   0x01    // Load LEFT value to reg B
-@0x89   0x21    // LEFT value RAM addr
-@0x8A   0x07    // Go to IR write
-@0x8B   0xA8    // IR write ROM addr
-
-// BACKWARD-LEFT
-
-@0x8C   0x01    // Load BACKWARD-LEFT value to reg B
-@0x8D   0x22    // BACKWARD-LEFT value RAM addr
+@0x8C   0x01    // Load FORWARD-LEFT value to reg B
+@0x8D   0x20    // FORWARD-LEFT value RAM addr
 @0x8E   0x07    // Go to IR write
 @0x8F   0xA8    // IR write ROM addr
 
-// FORWARD
+//LEFT
 
-@0x90   0x01    // Load FORWARD value to reg B  
-@0x91   0x23    // FORWARD value RAM addr
+@0x90   0x01    // Load LEFT value to reg B
+@0x91   0x21    // LEFT value RAM addr
 @0x92   0x07    // Go to IR write
 @0x93   0xA8    // IR write ROM addr
 
-// IDLE
+// BACKWARD-LEFT
 
-@0x94   0x01    // Load IDLE value to reg B 
-@0x95   0x24    // IDLE value RAM addr
+@0x94   0x01    // Load BACKWARD-LEFT value to reg B
+@0x95   0x22    // BACKWARD-LEFT value RAM addr
 @0x96   0x07    // Go to IR write
 @0x97   0xA8    // IR write ROM addr
 
+// FORWARD
+
+@0x98   0x01    // Load FORWARD value to reg B  
+@0x99   0x23    // FORWARD value RAM addr
+@0x9A   0x07    // Go to IR write
+@0xA0   0xA8    // IR write ROM addr
+
+// IDLE
+
+@0xA1   0x01    // Load IDLE value to reg B 
+@0xA2   0x24    // IDLE value RAM addr
+@0xA3   0x07    // Go to IR write
+@0xA4   0xA8    // IR write ROM addr
+
 // BACKWARD
 
-@0x98   0x01    // Load BACKWARD value to reg B 
-@0x99   0x25    // BACKWARD value RAM addr
-@0x9A   0x07    // Go to IR write
-@0x9B   0xA8    // IR write ROM addr
+@0xA5   0x01    // Load BACKWARD value to reg B 
+@0xA6   0x25    // BACKWARD value RAM addr
+@0xA7   0x07    // Go to IR write
+@0xA8   0xA8    // IR write ROM addr
 
 // FORWARD-RIGHT
 
-@0x9C   0x01    // Load FORWARD-RIGHT value to reg B 
-@0x9D   0x26    // FORWARD-RIGHT value RAM addr
-@0x9E   0x07    // Go to IR write
-@0x9F   0xA8    // IR write ROM addr
+@0xA9   0x01    // Load FORWARD-RIGHT value to reg B 
+@0xAA   0x26    // FORWARD-RIGHT value RAM addr
+@0xAB   0x07    // Go to IR write
+@0xAC   0xA8    // IR write ROM addr
 
 // RIGHT
 
-@0xA0   0x01    // Load RIGHT value to reg B
-@0xA1   0x27    // RIGHT value RAM addr
-@0xA2   0x07    // Go to IR write
-@0xA3   0xA8    // IR write ROM addr
+@0xAD   0x01    // Load RIGHT value to reg B
+@0xAE   0x27    // RIGHT value RAM addr
+@0xAF   0x07    // Go to IR write
+@0xB0   0xA8    // IR write ROM addr
 
 // BACKWARD-RIGHT
 
-@0xA4   0x01    // Load BACKWARD-RIGHT value to reg B
-@0xA5   0x28    // BACKWARD-IGHT value RAM addr
-@0xA6   0x07    // Go to IR write
-@0xA7   0xA8    // IR write ROM addr
+@0xB1   0x01    // Load BACKWARD-RIGHT value to reg B
+@0xB2   0x28    // BACKWARD-IGHT value RAM addr
+@0xB3   0x07    // Go to IR write
+@0xB4   0xA8    // IR write ROM addr
 
 
 // IR write
 
-@0xA8   0x03    // Write direction value in reg B
-@0xA9   0x90    // IR RAM addr
-
-
-@0xAA   0x07	// GOTO:
-@0xAB   0x24	// Check VGA coordinate limits
-
+@0xB5   0x03    // Write direction value in reg B
+@0xB6   0x90    // IR RAM addr
+@0xB7   0x07	// GOTO:
+@0xB8   0x24	// Check VGA coordinate limits
 
 
 // Mouse Codes 
+@0xC0   0x00    // read in x from ram
+@0xC1   0x60    // mouse driver address for x
+@0xC2   0x02    // write to VGA
+@0xC3   0xB0    // VGA x coordinate address
 
+@0xC4   0x00    // read in y from ram
+@0xC5   0x61    // mouse driver address for y
+@0xC6   0x02    // write to VGA
+@0xC7   0xB1    // VGA y coordinate address
 
-@0xD0   0x00    // read in x from ram
-@0xD1   0x60    // mouse driver address for x
-@0xD2   0x02    // write to VGA
-@0xD3   0xB0    // VGA x coordinate address
+@0xC8   0x00    // read 0
+@0xC9   0x00
+@0xCA   0x02    // write to vga
+@0xCB   0xB2    // VGA pixel data address
+@0xCC   0x00    // load 0
+@0xCD   0x00    //
+@0xCE   0x02    // clear flag
+@0xCF   0x0B    // 
+@0xD0   0x00    // read in status
+@0xD1   0xA0    // mouse driver address byte
+@0xD2   0x02    // write to bus (LED)
+@0xD3   0xF0    // LED driver address 
+@0xD4   0x01    // read in musk
+@0xD5   0x0A    // AND
+@0xD6   0xD5    // and register A and B to B
+@0xD7   0x96    // skip loading 
+@0xD8   0xDD    //
+@0xD9   0x00    // load 1
+@0xDA   0x01    //
+@0xDB   0x02    // save to a flag
+@0xDC   0x0B    // 
 
-@0xD4   0x00    // read in y from ram
-@0xD5   0x61    // mouse driver address for y
-@0xD6   0x02    // write to VGA
-@0xD7   0xB1    // VGA y coordinate address
+@0xDD   0x00    // read in x
+@0xDE   0xA1    // mouse driver address for x
+@0xDF   0x02    // write to bus
+@0xE0   0xD0    // 7seg driver address
+@0xE1   0x02    // write to ram
+@0xE2   0x60    // ram address 
+@0xE3   0x02    // write to vga x
+@0xE4   0xB0    // VGA x coordinate address
 
-@0xD8   0x00    // read 0
-@0xD9   0x00
-@0xDA   0x02    // write to vga
-@0xDB   0xB2    // VGA pixel data address
-
-@0xDC   0x00    // read in status
-@0xDD   0xA0    // mouse driver address byte
-@0xDE   0x02    // write to bus (LED)
-@0xDF   0xF0    // LED driver address 
-
-@0xE0   0x00    // read in x
-@0xE1   0xA1    // mouse driver address for x
-@0xE2   0x02    // write to bus
-@0xE3   0xD0    // 7seg driver address
-@0xE4   0x02    // write to ram
-@0xE5   0x60    // ram address 
-@0xE6   0x02    // write to vga x
-@0xE7   0xB0    // VGA x coordinate address
-
-@0xE8   0x00    // read in y
-@0xE9   0xA2    // mouse driver address for y
-@0xEA   0x02    // write to bus
-@0xEB   0xD1    // 7 seg driver address 
-@0xEC   0x02    // write to ram
-@0xED   0x61    // ram address 
-@0xEE   0x02    // write to vga Y
-@0xEF   0xB1    // VGA y coordinate address
+@0xE5   0x00    // read in y
+@0xE6   0xA2    // mouse driver address for y
+@0xE7   0x02    // write to bus
+@0xE8   0xD1    // 7 seg driver address 
+@0xE9   0x02    // write to ram
+@0xEA   0x61    // ram address 
+@0xEB   0x02    // write to vga Y
+@0xEC   0xB1    // VGA y coordinate address
 
 // VGA pixel
-@0xF0   0x00    // read 1
-@0xF1   0x01
-@0xF2   0x02    // write to vga
-@0xF3   0xB2
-@0xF4   0x0A    // return
+@0xED   0x00    // read 1
+@0xEE   0x01
+@0xEF   0x02    // write to vga
+@0xF0   0xB2
+@0xF1   0x0A    // return
 
-@0xFF   0xD0    //Jump to mouse handler address
+@0xFF   0xE0    //Jump to mouse handler address
