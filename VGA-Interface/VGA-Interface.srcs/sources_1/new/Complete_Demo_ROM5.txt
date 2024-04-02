@@ -311,4 +311,4 @@
 @0xF0   0xB2
 @0xF1   0x0A    // return
 
-@0xFF   0xE0    //Jump to mouse handler address
+@0xFF   0xC0    //Jump to mouse handler address
