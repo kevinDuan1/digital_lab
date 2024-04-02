@@ -89,19 +89,19 @@
 @0x5E   0x01    // Load 54 to reg B
 @0x5F   0x50    // 54 RAM addr
 @0x60   0xB6    // If X < 54, branch
-@0x61   0x60    // ROM addr
+@0x61   0x68    // ROM addr
 
 // Middle
 
 @0x62   0x01    // Else if X > 54, load 107 to reg B
 @0x63   0x51    // 107 RAM addr
 @0x64   0xB6    // If X < 107, branch
-@0x65   0x6C    // ROM addr
+@0x65   0x74    // ROM addr
 
 // Right
 
 @0x66   0x07    // Else, X > 107 so go to
-@0x67   0x78    // ROM addr
+@0x67   0x80    // ROM addr
 
 
 // Check Y axis (X < 54)
@@ -114,19 +114,19 @@
 @0x6A   0x01    // Load 40 to reg B
 @0x6B   0x40    // 40 RAM addr
 @0x6C   0xB6    // If Y < 40, branch
-@0x6D   0x84    // FORWARD-LEFT direction ROM addr
+@0x6D   0x8C    // FORWARD-LEFT direction ROM addr
 
 // Middle
 
 @0x6E   0x01    // Else if X > 40, load 80 to reg B
 @0x6F   0x41    // 80 RAM addr
 @0x70   0xB6    // If Y < 80, branch
-@0x71   0x88    // LEFT direction ROM addr
+@0x71   0x90    // LEFT direction ROM addr
 
 // Bottom
 
 @0x72   0x07    // Else, Y > 80 so go to
-@0x73   0x8C    // BACKWARD-LEFT direction ROM addr
+@0x73   0x94    // BACKWARD-LEFT direction ROM addr
 
 
 // Check Y axis (54 < X < 107)
@@ -139,19 +139,19 @@
 @0x76   0x01    // Load 40 to reg B
 @0x77   0x40    // 40 RAM addr
 @0x78   0xB6    // If Y < 40, branch
-@0x79   0x90    // FORWARD direction ROM addr
+@0x79   0x98    // FORWARD direction ROM addr
 
 // Middle
 
 @0x7A   0x01    // Else if X > 40, load 80 to reg B
 @0x7B   0x41    // 80 RAM addr
 @0x7C   0xB6    // If Y < 80, branch
-@0x7D   0x94    // IDLE direction ROM addr
+@0x7D   0x9C    // IDLE direction ROM addr
 
 // Bottom
 
 @0x7E   0x07    // Else, Y > 80 so go to
-@0x7F   0x98    // BACKWARD direction ROM addr
+@0x7F   0xA0    // BACKWARD direction ROM addr
 
 
 // Check Y axis (X > 107)
@@ -164,19 +164,19 @@
 @0x82   0x01    // Load 40 to reg B
 @0x83   0x40    // 40 RAM addr
 @0x84   0xB6    // If Y < 40, branch
-@0x85   0x9C    // FORWARD-RIGHT direction ROM addr
+@0x85   0xA4    // FORWARD-RIGHT direction ROM addr
 
 // Middle
 
 @0x86   0x01    // Else if X > 40, load 80 to reg B
 @0x87   0x41    // 80 RAM addr
 @0x88   0xB6    // If Y < 80, branch
-@0x89   0xA0    // RIGHT direction ROM addr
+@0x89   0xA8    // RIGHT direction ROM addr
 
 // Bottom
 
 @0x8A   0x07    // Else, Y > 80 so go to
-@0x8B   0xA4    // BACKWARD-RIGHT direction ROM addr
+@0x8B   0xAC    // BACKWARD-RIGHT direction ROM addr
 
 
 // Direction
@@ -186,71 +186,73 @@
 @0x8C   0x01    // Load FORWARD-LEFT value to reg B
 @0x8D   0x20    // FORWARD-LEFT value RAM addr
 @0x8E   0x07    // Go to IR write
-@0x8F   0xA8    // IR write ROM addr
+@0x8F   0xB0    // IR write ROM addr
 
 //LEFT
 
 @0x90   0x01    // Load LEFT value to reg B
 @0x91   0x21    // LEFT value RAM addr
 @0x92   0x07    // Go to IR write
-@0x93   0xA8    // IR write ROM addr
+@0x93   0xB0    // IR write ROM addr
 
 // BACKWARD-LEFT
 
 @0x94   0x01    // Load BACKWARD-LEFT value to reg B
 @0x95   0x22    // BACKWARD-LEFT value RAM addr
 @0x96   0x07    // Go to IR write
-@0x97   0xA8    // IR write ROM addr
+@0x97   0xB0    // IR write ROM addr
 
 // FORWARD
 
 @0x98   0x01    // Load FORWARD value to reg B  
 @0x99   0x23    // FORWARD value RAM addr
 @0x9A   0x07    // Go to IR write
-@0xA0   0xA8    // IR write ROM addr
+@0x9B   0xB0    // IR write ROM addr
 
 // IDLE
 
-@0xA1   0x01    // Load IDLE value to reg B 
-@0xA2   0x24    // IDLE value RAM addr
-@0xA3   0x07    // Go to IR write
-@0xA4   0xA8    // IR write ROM addr
+@0x9C   0x01    // Load IDLE value to reg B 
+@0x9D   0x24    // IDLE value RAM addr
+@0x9E   0x07    // Go to IR write
+@0x9F   0xB0    // IR write ROM addr
 
 // BACKWARD
 
-@0xA5   0x01    // Load BACKWARD value to reg B 
-@0xA6   0x25    // BACKWARD value RAM addr
-@0xA7   0x07    // Go to IR write
-@0xA8   0xA8    // IR write ROM addr
+@0xA0   0x01    // Load BACKWARD value to reg B 
+@0xA1   0x25    // BACKWARD value RAM addr
+@0xA2   0x07    // Go to IR write
+@0xA3   0xB0    // IR write ROM addr
 
 // FORWARD-RIGHT
 
-@0xA9   0x01    // Load FORWARD-RIGHT value to reg B 
-@0xAA   0x26    // FORWARD-RIGHT value RAM addr
-@0xAB   0x07    // Go to IR write
-@0xAC   0xA8    // IR write ROM addr
+@0xA4   0x01    // Load FORWARD-RIGHT value to reg B 
+@0xA5   0x26    // FORWARD-RIGHT value RAM addr
+@0xA6   0x07    // Go to IR write
+@0xA7   0xB0    // IR write ROM addr
 
 // RIGHT
 
-@0xAD   0x01    // Load RIGHT value to reg B
-@0xAE   0x27    // RIGHT value RAM addr
-@0xAF   0x07    // Go to IR write
-@0xB0   0xA8    // IR write ROM addr
+@0xA8   0x01    // Load RIGHT value to reg B
+@0xA9   0x27    // RIGHT value RAM addr
+@0xAA   0x07    // Go to IR write
+@0xAB   0xB0    // IR write ROM addr
 
 // BACKWARD-RIGHT
 
-@0xB1   0x01    // Load BACKWARD-RIGHT value to reg B
-@0xB2   0x28    // BACKWARD-IGHT value RAM addr
-@0xB3   0x07    // Go to IR write
-@0xB4   0xA8    // IR write ROM addr
+@0xAC   0x01    // Load BACKWARD-RIGHT value to reg B
+@0xAD   0x28    // BACKWARD-IGHT value RAM addr
+@0xAE   0x07    // Go to IR write
+@0xAF   0xB0    // IR write ROM addr
 
 
 // IR write
 
-@0xB5   0x03    // Write direction value in reg B
-@0xB6   0x90    // IR RAM addr
-@0xB7   0x07	// GOTO:
-@0xB8   0x24	// Check VGA coordinate limits
+@0xB0   0x03    // Write direction value in reg B
+@0xB1   0x90    // IR RAM addr
+
+
+@0xB2   0x07	// GOTO:
+@0xB3   0x24	// Check VGA coordinate limits
 
 
 // Mouse Codes 
