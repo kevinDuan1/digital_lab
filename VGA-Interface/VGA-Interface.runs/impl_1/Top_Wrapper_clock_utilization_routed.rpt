@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date              : Mon Apr 01 17:41:13 2024
+| Date              : Tue Apr 02 10:40:04 2024
 | Host              : ASUS-VB running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file Top_Wrapper_clock_utilization_routed.rpt
 | Design            : Top_Wrapper
@@ -48,8 +48,8 @@ Table of Contents
 +-------+--------------------+---------------+------+-------+-------+
 | Index | BUFG Cell          | Net Name      | BELs | Sites | Fixed |
 +-------+--------------------+---------------+------+-------+-------+
-|     1 | Mem_reg_i_1        | VGA_CLK       |   37 |    11 |    no |
-|     2 | CLK_IBUF_BUFG_inst | CLK_IBUF_BUFG |  522 |   202 |    no |
+|     1 | Mem_reg_i_1        | VGA_CLK       |   37 |    13 |    no |
+|     2 | CLK_IBUF_BUFG_inst | CLK_IBUF_BUFG |  522 |   211 |    no |
 +-------+--------------------+---------------+------+-------+-------+
 
 
@@ -70,7 +70,7 @@ Table of Contents
 +-------+------------------------------------+------------------------+------+-------+-------+
 | Index | Local Clk Src                      | Net Name               | BELs | Sites | Fixed |
 +-------+------------------------------------+------------------------+------+-------+-------+
-|     1 | VGA/Colour_Counter/trigger_out_reg | VGA/Colour_Counter/I53 |   16 |     4 |    no |
+|     1 | VGA/Colour_Counter/trigger_out_reg | VGA/Colour_Counter/I54 |   16 |     4 |    no |
 +-------+------------------------------------+------------------------+------+-------+-------+
 
 
@@ -142,11 +142,11 @@ add_cells_to_pblock [get_pblocks  {CLKAG_CLK_IBUF_BUFG}] [get_cells -filter { PR
 resize_pblock [get_pblocks {CLKAG_CLK_IBUF_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
-# Clock net "VGA/Colour_Counter/I53" driven by instance "VGA/Colour_Counter/trigger_out_reg" located at site "SLICE_X4Y36"
+# Clock net "VGA/Colour_Counter/I54" driven by instance "VGA/Colour_Counter/trigger_out_reg" located at site "SLICE_X3Y32"
 #startgroup
-create_pblock {CLKAG_VGA/Colour_Counter/I53}
-add_cells_to_pblock [get_pblocks  {CLKAG_VGA/Colour_Counter/I53}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="VGA/Colour_Counter/I53"}]]]
-resize_pblock [get_pblocks {CLKAG_VGA/Colour_Counter/I53}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+create_pblock {CLKAG_VGA/Colour_Counter/I54}
+add_cells_to_pblock [get_pblocks  {CLKAG_VGA/Colour_Counter/I54}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="VGA/Colour_Counter/I54"}]]]
+resize_pblock [get_pblocks {CLKAG_VGA/Colour_Counter/I54}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
 #endgroup
 
 # Clock net "VGA_CLK" driven by instance "Mem_reg_i_1" located at site "BUFGCTRL_X0Y1"
