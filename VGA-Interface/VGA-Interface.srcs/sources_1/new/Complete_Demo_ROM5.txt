@@ -31,7 +31,7 @@
 @0x1A   0x00    // Save value to reg A for comparison:   
 @0x1B   0x10	// Load value from RAM@0x10 (current X coordinate)
 @0x1C   0x96    // Check if x = 54
-@0X1D   0x50    // Branch to pixel data in = 1
+@0x1D   0x50    // Branch to pixel data in = 1
 
 @0x1E   0x01    // Save value to reg B for vertical line
 @0x1F   0x51    // Load value from RAM@0x51 (X=107)
@@ -48,7 +48,7 @@
 @0x29   0x2D    // Check Y limit.
 @0x2A   0x54	// Increment X coordinate by 1
 @0x2B	0x07	// GOTO:
-@0x2C	0x08    // Update X coordinate
+@0x2C	0x0A    // Update X coordinate
 
 @0x2D   0x00    // Save the Y limit value 120 into reg A for comparison
 @0x2E   0x12	// Load value from RAM@0x12 to reg A (120)
@@ -64,10 +64,7 @@
 @0x51   0x01	// Load value from RAM@0x01 to reg B (PIXEL_DATA_IN foreground) b
 @0x52   0x02    // Write to memory from reg B
 @0x53   0xB2	// Target address: VGA update pixel data
-@0x54   0x00
-@0x55   0x00
-@0x56   0x02
-@0x57   0xB2
+
 
 
 // IR
