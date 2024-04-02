@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Tue Apr 02 10:32:00 2024
+| Date             : Tue Apr 02 10:40:03 2024
 | Host             : ASUS-VB running 64-bit major release  (build 9200)
 | Command          : 
 | Design           : Top_Wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 14.624 (Junction temp exceeded!) |
-| Dynamic (W)              | 14.379                           |
-| Device Static (W)        | 0.245                            |
+| Total On-Chip Power (W)  | 15.604 (Junction temp exceeded!) |
+| Dynamic (W)              | 15.327                           |
+| Device Static (W)        | 0.278                            |
 | Effective TJA (C/W)      | 5.0                              |
-| Max Ambient (C)          | 11.9                             |
-| Junction Temperature (C) | 98.1                             |
+| Max Ambient (C)          | 7.0                              |
+| Junction Temperature (C) | 103.0                            |
 | Confidence Level         | Low                              |
 | Setting File             | ---                              |
 | Simulation Activity File | ---                              |
@@ -49,18 +49,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     3.456 |     1644 |       --- |             --- |
-|   LUT as Logic |     3.089 |      807 |     20800 |            3.88 |
-|   CARRY4       |     0.211 |       88 |      8150 |            1.08 |
-|   Register     |     0.121 |      571 |     41600 |            1.37 |
+| Slice Logic    |     3.663 |     1663 |       --- |             --- |
+|   LUT as Logic |     3.280 |      815 |     20800 |            3.92 |
+|   CARRY4       |     0.195 |       88 |      8150 |            1.08 |
+|   Register     |     0.138 |      571 |     41600 |            1.37 |
 |   BUFG         |     0.029 |        2 |        32 |            6.25 |
-|   F7/F8 Muxes  |     0.005 |        5 |     32600 |            0.02 |
+|   F7/F8 Muxes  |     0.020 |       24 |     32600 |            0.07 |
 |   Others       |     0.000 |       46 |       --- |             --- |
-| Signals        |     3.051 |     1375 |       --- |             --- |
+| Signals        |     3.259 |     1354 |       --- |             --- |
 | Block RAM      |     0.652 |        2 |        50 |            4.00 |
-| I/O            |     7.220 |       37 |       106 |           34.91 |
-| Static Power   |     0.245 |          |           |                 |
-| Total          |    14.624 |          |           |                 |
+| I/O            |     7.752 |       37 |       106 |           34.91 |
+| Static Power   |     0.278 |          |           |                 |
+| Total          |    15.604 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,16 +70,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     7.271 |       7.122 |      0.149 |
-| Vccaux    |       1.800 |     0.293 |       0.264 |      0.029 |
-| Vcco33    |       3.300 |     2.041 |       2.040 |      0.001 |
+| Vccint    |       1.000 |     7.712 |       7.537 |      0.175 |
+| Vccaux    |       1.800 |     0.316 |       0.284 |      0.032 |
+| Vcco33    |       3.300 |     2.192 |       2.191 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.054 |       0.049 |      0.004 |
+| Vccbram   |       1.000 |     0.055 |       0.049 |      0.005 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -137,34 +137,34 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| Top_Wrapper             |    14.379 |
+| Top_Wrapper             |    15.327 |
 |   CLK_MOUSE_IOBUF_inst  |     0.000 |
 |   DATA_MOUSE_IOBUF_inst |    <0.001 |
-|   IRWrapper             |     0.922 |
-|     Counter             |     0.313 |
-|     IRSM                |     0.609 |
+|   IRWrapper             |     1.002 |
+|     Counter             |     0.369 |
+|     IRSM                |     0.633 |
 |   LED_Driver_inst       |    <0.001 |
-|   Mouse_Driver_inst     |     1.157 |
-|     Mouse_transceiver   |     1.108 |
-|       MSM               |     0.228 |
-|       R                 |     0.388 |
-|       T                 |     0.211 |
-|   Processor             |     1.576 |
-|     ALU0                |     0.184 |
-|   RAM                   |     0.131 |
-|   ROM                   |     1.214 |
-|   Seven_Seg_Driver_inst |     0.185 |
-|     RD                  |     0.185 |
-|       Bit17Counter      |     0.183 |
+|   Mouse_Driver_inst     |     1.053 |
+|     Mouse_transceiver   |     1.025 |
+|       MSM               |     0.209 |
+|       R                 |     0.315 |
+|       T                 |     0.271 |
+|   Processor             |     1.723 |
+|     ALU0                |     0.160 |
+|   RAM                   |     0.130 |
+|   ROM                   |     1.388 |
+|   Seven_Seg_Driver_inst |     0.207 |
+|     RD                  |     0.207 |
+|       Bit17Counter      |     0.205 |
 |       Bit2Counter       |     0.002 |
-|   Timer                 |     0.555 |
-|   VGA                   |     1.311 |
-|     Colour_Counter      |     0.282 |
-|     Frame_Buffer        |     0.595 |
-|     VGA_Sig_Gen         |     0.344 |
+|   Timer                 |     0.560 |
+|   VGA                   |     1.404 |
+|     Colour_Counter      |     0.304 |
+|     Frame_Buffer        |     0.614 |
+|     VGA_Sig_Gen         |     0.376 |
 |       CounterCLK        |     0.061 |
-|       CounterH          |     0.208 |
-|       CounterV          |    <0.001 |
+|       CounterH          |     0.235 |
+|       CounterV          |     0.001 |
 +-------------------------+-----------+
 
 

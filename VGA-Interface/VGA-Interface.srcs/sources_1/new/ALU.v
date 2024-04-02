@@ -68,7 +68,7 @@ module ALU(
                 //B%2
                 4'hD: Out <= (IN_B % 2);
                 //and
-                4'hE: Out <= (IN_B & IN_A)
+                4'hE: Out <= (IN_B & IN_A);
                 //Default A
                 default: Out <= IN_A;
             endcase

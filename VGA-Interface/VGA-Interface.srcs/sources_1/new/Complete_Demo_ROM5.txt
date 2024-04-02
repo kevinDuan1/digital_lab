@@ -48,7 +48,7 @@
 @0x29   0x2D    // Check Y limit.
 @0x2A   0x54	// Increment X coordinate by 1
 @0x2B	0x07	// GOTO:
-@0x2C	0x0A    // Update X coordinate
+@0x2C	0x08    // Update X coordinate
 
 @0x2D   0x00    // Save the Y limit value 120 into reg A for comparison
 @0x2E   0x12	// Load value from RAM@0x12 to reg A (120)
