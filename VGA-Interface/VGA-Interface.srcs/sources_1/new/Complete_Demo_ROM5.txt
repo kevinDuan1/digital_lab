@@ -60,10 +60,14 @@
 @0x34   0x07    //Jump to the line of code that stores the value of register
 @0x35   0x02	// Update Y coordinate
 
-@0x50   0x01    // Load FOREGROUND value reg B
+@0x50   0x00    // Load FOREGROUND value reg B
 @0x51   0x01	// Load value from RAM@0x01 to reg B (PIXEL_DATA_IN foreground) b
-@0x52   0x03    // Write to memory from reg B
+@0x52   0x02    // Write to memory from reg B
 @0x53   0xB2	// Target address: VGA update pixel data
+@0x54   0x00
+@0x55   0x00
+@0x56   0x02
+@0x57   0xB2
 
 
 // IR
