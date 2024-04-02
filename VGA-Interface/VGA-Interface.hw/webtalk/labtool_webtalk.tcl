@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.hw/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Mon Apr 01 12:50:34 2024" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue Apr 02 10:01:42 2024" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "Vivado v2015.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "1266856" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,13 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "a7741c58-92cf-410a-9722-630f3899c15b" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "214d6b0c-53e7-4024-9af6-b62a377059dd" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "16" -context "software_version_and_target_device"
-webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
-webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
-webtalk_add_data -client project -key cpu_name -value "AMD Ryzen 3 3250U with Radeon Graphics         " -context "user_environment"
-webtalk_add_data -client project -key cpu_speed -value "2595 MHz" -context "user_environment"
-webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
-webtalk_add_data -client project -key system_ram -value "10.000 GB" -context "user_environment"
+webtalk_add_data -client project -key project_iteration -value "19" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "AMD Ryzen 3 3250U with Radeon Graphics         " -context "user_environment"
@@ -31,8 +25,5 @@ webtalk_register_client -client labtool
 webtalk_add_data -client labtool -key cable -value "Digilent/Basys3/15000000" -context "labtool\\usage"
 webtalk_add_data -client labtool -key chain -value "0362D093" -context "labtool\\usage"
 webtalk_add_data -client labtool -key pgmcnt -value "00:00:00" -context "labtool\\usage"
-webtalk_add_data -client labtool -key cable -value "Digilent/Basys3/15000000" -context "labtool\\usage"
-webtalk_add_data -client labtool -key chain -value "0362D093" -context "labtool\\usage"
-webtalk_add_data -client labtool -key pgmcnt -value "00:00:00" -context "labtool\\usage"
-webtalk_transmit -clientid 550105214 -regid "212550022_0_0_309" -xml C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.hw/webtalk/usage_statistics_ext_labtool.xml -html C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.hw/webtalk/usage_statistics_ext_labtool.html -wdm C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
+webtalk_transmit -clientid 4282982442 -regid "212550022_0_0_309" -xml C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.hw/webtalk/usage_statistics_ext_labtool.xml -html C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.hw/webtalk/usage_statistics_ext_labtool.html -wdm C:/Users/Marco/digital_lab/VGA-Interface/VGA-Interface.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
 webtalk_terminate

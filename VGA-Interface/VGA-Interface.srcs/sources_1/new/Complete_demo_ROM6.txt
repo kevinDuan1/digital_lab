@@ -58,7 +58,7 @@
 @0x32   0x00    // To beggining of code
 @0x33   0x65    // Increment Y coordinate by 1
 @0x34   0x07    //Jump to the line of code that stores the value of register
-@0x35   0x02	// Update Y coordinate
+@0x35   0x04	// Update Y coordinate
 
 @0x50   0x00    // Load FOREGROUND value reg B
 @0x51   0x01	// Load value from RAM@0x01 to reg B (PIXEL_DATA_IN foreground) b
